@@ -1,0 +1,1950 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0xb (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2db0
+entry 0x403c8914
+[0;32mI (27) boot: ESP-IDF v5.3 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar 30 2026 12:24:05[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (79) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (86) boot:  3 ota_0            OTA app          00 10 00020000 00400000[0m
+[0;32mI (94) boot:  4 ota_1            OTA app          00 11 00420000 00400000[0m
+[0;32mI (101) boot:  5 assets           Unknown data     01 82 00820000 007e0000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (113) esp_image: segment 0: paddr=00020020 vaddr=3c0b0020 size=26008h (155656) map[0m
+[0;32mI (150) esp_image: segment 1: paddr=00046030 vaddr=3fc9ab00 size=04dcch ( 19916) load[0m
+[0;32mI (154) esp_image: segment 2: paddr=0004ae04 vaddr=40374000 size=05214h ( 21012) load[0m
+[0;32mI (160) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=a0178h (655736) map[0m
+[0;32mI (282) esp_image: segment 4: paddr=000f01a0 vaddr=40379214 size=117fch ( 71676) load[0m
+[0;32mI (307) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (307) boot: Disabling RNG early entropy source...[0m
+[0;32mI (319) cpu_start: Multicore app[0m
+[0;32mI (328) cpu_start: Pro cpu start user code[0m
+[0;32mI (328) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (328) app_init: Application information:[0m
+[0;32mI (331) app_init: Project name:     idfzk[0m
+[0;32mI (336) app_init: App version:      1[0m
+[0;32mI (340) app_init: Compile time:     Mar 30 2026 12:23:50[0m
+[0;32mI (346) app_init: ELF file SHA256:  ae1d37547...[0m
+[0;32mI (351) app_init: ESP-IDF:          v5.3[0m
+[0;32mI (356) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (361) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (366) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (371) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (378) heap_init: At 3FCA3B68 len 00045BA8 (278 KiB): RAM[0m
+[0;32mI (384) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (390) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (396) heap_init: At 600FE100 len 00001EE8 (7 KiB): RTCRAM[0m
+[0;32mI (404) spi_flash: detected chip: generic[0m
+[0;32mI (407) spi_flash: flash io: dio[0m
+[0;32mI (411) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (418) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (425) main_task: Started on CPU0[0m
+[0;32mI (455) main_task: Calling app_main()[0m
+[0;32mI (455) idfzk: Initializing ESP32-S3 OLED display module[0m
+[0;32mI (455) idfzk: Initializing SPIFFS...[0m
+[0;32mI (915) idfzk: SPIFFS initialized successfully[0m
+[0;32mI (915) idfzk: Partition size: total: 7582961, used: 4360874[0m
+[0;32mI (915) idfzk: Loading font file: /spiffs/GT32L24M0140.bin[0m
+[0;32mI (915) idfzk: Font file size: 4194304 bytes[0m
+[0;32mI (925) idfzk: Font file loaded successfully[0m
+[0;32mI (925) idfzk: Loading uni2gbk mapping file: /spiffs/uni2gbk.bin[0m
+[0;32mI (1065) idfzk: Uni2gbk file size: 131072 bytes[0m
+[0;32mI (1065) idfzk: Uni2gbk file loaded successfully[0m
+[0;32mI (1065) idfzk: Testing font file first 16 bytes:[0m
+FF FF FF FF FF FF FF FF 
+FF FF FF FF FF FF FF FF 
+[0;32mI (1065) idfzk: 
+========== Testing uni2gbk conversion ==========[0m
+[0;32mI (1075) idfzk: 江: hardcoded=0xBDAD, file=0xBDAD, PASS[0m
+[0;32mI (1275) idfzk: 西: hardcoded=0xCEF7, file=0xCEF7, PASS[0m
+[0;32mI (1465) idfzk: 省: hardcoded=0xCAA1, file=0xCAA1, PASS[0m
+[0;32mI (1665) idfzk: 萍: hardcoded=0xC6BC, file=0xC6BC, PASS[0m
+[0;32mI (1855) idfzk: 乡: hardcoded=0xCFE7, file=0xCFE7, PASS[0m
+[0;32mI (2045) idfzk: 市: hardcoded=0xCAD0, file=0xCAD0, PASS[0m
+[0;32mI (2235) idfzk: 胖: hardcoded=0xC5D6, file=0xC5D6, PASS[0m
+[0;32mI (2435) idfzk: 达: hardcoded=0xB4EF, file=0xB4EF, PASS[0m
+[0;32mI (2625) idfzk: 科: hardcoded=0xBFC6, file=0xBFC6, PASS[0m
+[0;32mI (2815) idfzk: 技: hardcoded=0xBCBC, file=0xBCBC, PASS[0m
+[0;32mI (3015) idfzk: 路: hardcoded=0xC2B7, file=0xC2B7, PASS[0m
+[0;32mI (3205) idfzk: 明: hardcoded=0xC3F7, file=0xC3F7, PASS[0m
+[0;32mI (3395) idfzk: 电: hardcoded=0xB5E7, file=0xB5E7, PASS[0m
+[0;32mI (3585) idfzk: 脑: hardcoded=0xC4D4, file=0xC4D4, PASS[0m
+[0;32mI (3785) idfzk: 中: hardcoded=0xD6D0, file=0xD6D0, PASS[0m
+[0;32mI (3975) idfzk: 国: hardcoded=0xB9FA, file=0xB9FA, PASS[0m
+[0;32mI (4165) idfzk: 人: hardcoded=0xC8CB, file=0xC8CB, PASS[0m
+[0;32mI (4355) idfzk: 民: hardcoded=0xC3F1, file=0xC3F1, PASS[0m
+[0;32mI (4555) idfzk: 这: hardcoded=0xD5E2, file=0xD5E2, PASS[0m
+[0;32mI (4745) idfzk: 是: hardcoded=0xCAC7, file=0xCAC7, PASS[0m
+[0;32mI (4935) idfzk: 第: hardcoded=0xB5DA, file=0xB5DA, PASS[0m
+[0;32mI (5135) idfzk: 一: hardcoded=0xD2BB, file=0xD2BB, PASS[0m
+[0;32mI (5135) idfzk: 个: hardcoded=0xB8F6, file=0xB8F6, PASS[0m
+[0;32mI (5325) idfzk: 测: hardcoded=0xB2E2, file=0xB2E2, PASS[0m
+[0;31mE (5455) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (5455) task_wdt:  - IDLE0 (CPU 0)[0m
+[0;31mE (5455) task_wdt: Tasks currently running:[0m
+[0;31mE (5455) task_wdt: CPU 0: main[0m
+[0;31mE (5455) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (5455) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x42015683:0x3FC9D230 0x42015AA0:0x3FC9D250 0x40377641:0x3FC9D280 0x400559DD:0x3FCA7270 0x4037E143:0x3FCA7280 0x4037D78B:0x3FCA72A0 0x4037D87E:0x3FCA72E0 0x42014F6B:0x3FCA7300 0x40377ED4:0x3FCA7320 0x40378B7F:0x3FCA7340 0x40378B8A:0x3FCA7360 0x4037B415:0x3FCA7380 0x4037863F:0x3FCA73A0 0x420145F2:0x3FCA73E0 0x4200DC2F:0x3FCA7410 0x42011723:0x3FCA7440 0x4200F405:0x3FCA7470 0x4200F83B:0x3FCA74C0 0x4200E6E8:0x3FCA7510 0x4200DA51:0x3FCA7540 0x42009ACF:0x3FCA7560 0x42084E6D:0x3FCA7580 0x420852AD:0x3FCA75A0 0x420846F6:0x3FCA7630 0x4200ADA1:0x3FCA7650 0x4200AE22:0x3FCA7680 0x4200B6A8:0x3FCA77D0 0x4209F27F:0x3FCA7870 0x4037DD9D:0x3FCA78A0
+
+[0;32mI (5595) idfzk: 试: hardcoded=0xCAF5, file=0xCAD4, FAIL[0m
+[0;32mI (5785) idfzk: 我: hardcoded=0xCED2, file=0xCED2, PASS[0m
+[0;32mI (5985) idfzk: 爱: hardcoded=0xB0AE, file=0xB0AE, PASS[0m
+[0;32mI (6175) idfzk: 李: hardcoded=0xC0EE, file=0xC0EE, PASS[0m
+[0;32mI (6365) idfzk: 美: hardcoded=0xC3C0, file=0xC3C0, PASS[0m
+[0;32mI (6555) idfzk: 春: hardcoded=0xB4BA, file=0xB4BA, PASS[0m
+[0;32mI (6755) idfzk: 西: hardcoded=0xCEF7, file=0xCEF7, PASS[0m
+[0;32mI (6945) idfzk: 班: hardcoded=0xB0E0, file=0xB0E0, PASS[0m
+[0;32mI (7135) idfzk: 牙: hardcoded=0xD1C0, file=0xD1C0, PASS[0m
+[0;32mI (7335) idfzk: 王: hardcoded=0xCDF5, file=0xCDF5, PASS[0m
+[0;32mI (7525) idfzk: 国: hardcoded=0xB9FA, file=0xB9FA, PASS[0m
+[0;32mI (7525) idfzk: 
+Test Summary: 34/35 passed[0m
+[0;31mE (7525) idfzk: Some tests failed. Please check the uni2gbk.bin file or conversion logic.[0m
+[0;32mI (7535) idfzk: Initializing SSD1306...[0m
+[0;32mI (7535) gpio: GPIO[1]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (7545) gpio: GPIO[6]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (7555) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (7665) SSD1306: SPI HOST_ID=1[0m
+[0;32mI (7665) SSD1306: spi_bus_initialize=0[0m
+[0;32mI (7665) SSD1306: spi_bus_add_device=0[0m
+[0;32mI (7695) idfzk: SSD1306 initialized successfully[0m
+[0;32mI (7735) idfzk: ========== WiFi Initialization ==========[0m
+[0;32mI (7735) idfzk: Initializing WiFi...[0m
+[0;32mI (7745) pp: pp rom version: e7ae62f[0m
+[0;32mI (7755) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (7765) wifi:wifi driver task: 3fcaf1f4, prio:23, stack:6656, core=0[0m
+[0;32mI (7775) wifi:wifi firmware version: 0caa81945[0m
+[0;32mI (7775) wifi:wifi certification version: v7.0[0m
+[0;32mI (7775) wifi:config NVS flash: enabled[0m
+[0;32mI (7775) wifi:config nano formating: disabled[0m
+[0;32mI (7775) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (7785) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (7785) wifi:Init management short buffer num: 32[0m
+[0;32mI (7785) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (7795) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (7795) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (7805) wifi:Init static rx buffer num: 10[0m
+[0;32mI (7805) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (7815) wifi_init: rx ba win: 6[0m
+[0;32mI (7815) wifi_init: accept mbox: 6[0m
+[0;32mI (7815) wifi_init: tcpip mbox: 32[0m
+[0;32mI (7825) wifi_init: udp mbox: 6[0m
+[0;32mI (7825) wifi_init: tcp mbox: 6[0m
+[0;32mI (7825) wifi_init: tcp tx win: 5760[0m
+[0;32mI (7835) wifi_init: tcp rx win: 5760[0m
+[0;32mI (7835) wifi_init: tcp mss: 1440[0m
+[0;32mI (7845) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (7845) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (7855) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;32mI (7895) wifi:mode : sta (24:58:7c:da:36:64)[0m
+[0;32mI (7895) wifi:enable tsf[0m
+[0;32mI (7895) idfzk: WiFi initialized successfully[0m
+[0;32mI (7895) idfzk: WiFi station started[0m
+[0;32mI (8115) idfzk: gt(c1=0xCE, c2=0xB4) = 3877, offset=0x0001E4A0, base=0x00114FDE, total=0x0013347E[0m
+[0;32mI (8115) idfzk: Reading character at address: 0x0013347E, size: 32 bytes[0m
+[0;32mI (8245) idfzk: Original vs Converted data:[0m
+01 00 01 00 01 00 3F F8  -> 80 80 88 88 88 88 88 FF 
+01 00 01 00 01 00 FF FE  -> 88 88 88 88 88 80 80 00 
+03 80 05 40 09 20 11 10  -> 20 20 10 08 04 02 01 FF 
+21 08 C1 06 01 00 01 00  -> 01 02 04 08 10 20 20 00 
+[0;32mI (8255) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (8265) idfzk: Converted character data (first 16 bytes):[0m
+80 80 88 88 88 88 88 FF 
+88 88 88 88 88 80 80 00 
+[0;32mI (8285) idfzk: Character data (first 16 bytes):[0m
+80 80 88 88 88 88 88 FF 
+88 88 88 88 88 80 80 00 
+... (total 32 bytes)
+[0;32mI (8375) idfzk: gt(c1=0xC1, c2=0xAC) = 2647, offset=0x00014AE0, base=0x00114FDE, total=0x00129ABE[0m
+[0;32mI (8375) idfzk: Reading character at address: 0x00129ABE, size: 32 bytes[0m
+[0;32mI (8495) idfzk: Original vs Converted data:[0m
+00 40 20 40 17 FE 10 80  -> 40 40 42 CC 00 04 44 64 
+00 A0 01 20 F3 FC 10 20  -> 5C 47 F4 44 44 44 04 00 
+10 20 10 20 17 FE 10 20  -> 00 40 20 1F 20 44 44 44 
+10 20 28 20 47 FE 00 00  -> 44 44 7F 44 44 44 44 00 
+[0;32mI (8505) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (8525) idfzk: Converted character data (first 16 bytes):[0m
+40 40 42 CC 00 04 44 64 
+5C 47 F4 44 44 44 04 00 
+[0;32mI (8535) idfzk: Character data (first 16 bytes):[0m
+40 40 42 CC 00 04 44 64 
+5C 47 F4 44 44 44 04 00 
+... (total 32 bytes)
+[0;32mI (8625) idfzk: gt(c1=0xBD, c2=0xD3) = 2310, offset=0x000120C0, base=0x00114FDE, total=0x0012709E[0m
+[0;32mI (8625) idfzk: Reading character at address: 0x0012709E, size: 32 bytes[0m
+[0;32mI (8745) idfzk: Original vs Converted data:[0m
+10 80 10 40 13 FC 10 00  -> 10 10 10 FF 10 50 44 54 
+FD 08 10 90 17 FE 10 40  -> 65 C6 44 64 54 44 40 00 
+18 40 37 FE D0 88 11 08  -> 04 44 82 7F 01 82 82 4A 
+10 90 10 60 51 98 26 04  -> 56 23 22 52 4E 82 02 00 
+[0;32mI (8765) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (8775) idfzk: Converted character data (first 16 bytes):[0m
+10 10 10 FF 10 50 44 54 
+65 C6 44 64 54 44 40 00 
+[0;32mI (8785) idfzk: Character data (first 16 bytes):[0m
+10 10 10 FF 10 50 44 54 
+65 C6 44 64 54 44 40 00 
+... (total 32 bytes)
+[0;32mI (8875) idfzk: gt(c1=0xC7, c2=0xEB) = 3274, offset=0x00019940, base=0x00114FDE, total=0x0012E91E[0m
+[0;32mI (8875) idfzk: Reading character at address: 0x0012E91E, size: 32 bytes[0m
+[0;32mI (8995) idfzk: Original vs Converted data:[0m
+00 40 40 40 27 FC 20 40  -> 40 42 CC 00 00 44 54 54 
+03 F8 00 40 E7 FE 20 00  -> 54 7F 54 54 54 44 40 00 
+23 F8 22 08 23 F8 22 08  -> 00 00 7F 20 10 00 FF 15 
+2B F8 32 08 22 28 02 10  -> 15 15 55 95 7F 00 00 00 
+[0;32mI (9015) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (9025) idfzk: Converted character data (first 16 bytes):[0m
+40 42 CC 00 00 44 54 54 
+54 7F 54 54 54 44 40 00 
+[0;32mI (9035) idfzk: Character data (first 16 bytes):[0m
+40 42 CC 00 00 44 54 54 
+54 7F 54 54 54 44 40 00 
+... (total 32 bytes)
+[0;32mI (9125) idfzk: gt(c1=0xCA, c2=0xB9) = 3506, offset=0x0001B640, base=0x00114FDE, total=0x0013061E[0m
+[0;32mI (9125) idfzk: Reading character at address: 0x0013061E, size: 32 bytes[0m
+[0;32mI (9255) idfzk: Original vs Converted data:[0m
+10 40 10 40 1F FE 20 40  -> 80 60 F8 07 04 E4 24 24 
+20 40 67 FC 64 44 A4 44  -> 24 FF 24 24 24 E4 04 00 
+27 FC 20 40 22 40 21 40  -> 00 00 FF 00 80 81 45 29 
+20 80 21 40 22 30 2C 0E  -> 11 2F 41 41 81 81 80 00 
+[0;32mI (9265) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (9275) idfzk: Converted character data (first 16 bytes):[0m
+80 60 F8 07 04 E4 24 24 
+24 FF 24 24 24 E4 04 00 
+[0;32mI (9285) idfzk: Character data (first 16 bytes):[0m
+80 60 F8 07 04 E4 24 24 
+24 FF 24 24 24 E4 04 00 
+... (total 32 bytes)
+[0;32mI (9375) idfzk: gt(c1=0xD3, c2=0xC3) = 4362, offset=0x00022140, base=0x00114FDE, total=0x0013711E[0m
+[0;32mI (9375) idfzk: Reading character at address: 0x0013711E, size: 32 bytes[0m
+[0;32mI (9505) idfzk: Original vs Converted data:[0m
+00 00 3F F8 21 08 21 08  -> 00 00 FE 22 22 22 22 FE 
+21 08 3F F8 21 08 21 08  -> 22 22 22 22 FE 00 00 00 
+21 08 3F F8 21 08 21 08  -> 80 60 1F 02 02 02 02 7F 
+21 08 41 08 41 28 80 10  -> 02 02 42 82 7F 00 00 00 
+[0;32mI (9515) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (9535) idfzk: Converted character data (first 16 bytes):[0m
+00 00 FE 22 22 22 22 FE 
+22 22 22 22 FE 00 00 00 
+[0;32mI (9545) idfzk: Character data (first 16 bytes):[0m
+00 00 FE 22 22 22 22 FE 
+22 22 22 22 FE 00 00 00 
+... (total 32 bytes)
+[0;33mW (9785) idfzk: WiFi config file not found[0m
+[0;32mI (9785) idfzk: No WiFi config found, starting SmartConfig...[0m
+[0;32mI (9785) idfzk: Starting SmartConfig...[0m
+[0;32mI (9835) smartconfig: SC version: V3.0.1[0m
+[0;32mI (10835) idfzk: SmartConfig waiting... 1/60[0m
+[0;32mI (11835) idfzk: SmartConfig waiting... 2/60[0m
+[0;32mI (12835) idfzk: SmartConfig waiting... 3/60[0m
+[0;32mI (13835) idfzk: SmartConfig waiting... 4/60[0m
+[0;32mI (14655) wifi:ic_enable_sniffer[0m
+[0;32mI (14655) smartconfig: Start to find channel...[0m
+[0;32mI (14655) idfzk: SmartConfig scan done[0m
+[0;32mI (14835) idfzk: SmartConfig waiting... 5/60[0m
+[0;32mI (15835) idfzk: SmartConfig waiting... 6/60[0m
+[0;32mI (16835) idfzk: SmartConfig waiting... 7/60[0m
+[0;32mI (17835) idfzk: SmartConfig waiting... 8/60[0m
+[0;32mI (18835) idfzk: SmartConfig waiting... 9/60[0m
+[0;32mI (19835) idfzk: SmartConfig waiting... 10/60[0m
+[0;32mI (20835) idfzk: SmartConfig waiting... 11/60[0m
+[0;32mI (21835) idfzk: SmartConfig waiting... 12/60[0m
+[0;32mI (22835) idfzk: SmartConfig waiting... 13/60[0m
+[0;32mI (23835) idfzk: SmartConfig waiting... 14/60[0m
+[0;32mI (24835) idfzk: SmartConfig waiting... 15/60[0m
+[0;32mI (25835) idfzk: SmartConfig waiting... 16/60[0m
+[0;32mI (26835) idfzk: SmartConfig waiting... 17/60[0m
+[0;32mI (27835) idfzk: SmartConfig waiting... 18/60[0m
+[0;32mI (28835) idfzk: SmartConfig waiting... 19/60[0m
+[0;32mI (29835) idfzk: SmartConfig waiting... 20/60[0m
+[0;32mI (30835) idfzk: SmartConfig waiting... 21/60[0m
+[0;32mI (31835) idfzk: SmartConfig waiting... 22/60[0m
+[0;32mI (32835) idfzk: SmartConfig waiting... 23/60[0m
+[0;32mI (33835) idfzk: SmartConfig waiting... 24/60[0m
+[0;32mI (34835) idfzk: SmartConfig waiting... 25/60[0m
+[0;32mI (35835) idfzk: SmartConfig waiting... 26/60[0m
+[0;32mI (36835) idfzk: SmartConfig waiting... 27/60[0m
+[0;32mI (37835) idfzk: SmartConfig waiting... 28/60[0m
+[0;32mI (38835) idfzk: SmartConfig waiting... 29/60[0m
+[0;32mI (39835) idfzk: SmartConfig waiting... 30/60[0m
+[0;32mI (40835) idfzk: SmartConfig waiting... 31/60[0m
+[0;32mI (41835) idfzk: SmartConfig waiting... 32/60[0m
+[0;32mI (42835) idfzk: SmartConfig waiting... 33/60[0m
+[0;32mI (43835) idfzk: SmartConfig waiting... 34/60[0m
+[0;32mI (44835) idfzk: SmartConfig waiting... 35/60[0m
+[0;32mI (45835) idfzk: SmartConfig waiting... 36/60[0m
+[0;32mI (46835) idfzk: SmartConfig waiting... 37/60[0m
+[0;32mI (47835) idfzk: SmartConfig waiting... 38/60[0m
+[0;32mI (48835) idfzk: SmartConfig waiting... 39/60[0m
+[0;32mI (49835) idfzk: SmartConfig waiting... 40/60[0m
+[0;32mI (50835) idfzk: SmartConfig waiting... 41/60[0m
+[0;32mI (51835) idfzk: SmartConfig waiting... 42/60[0m
+[0;32mI (52835) idfzk: SmartConfig waiting... 43/60[0m
+[0;32mI (53835) idfzk: SmartConfig waiting... 44/60[0m
+[0;32mI (54835) idfzk: SmartConfig waiting... 45/60[0m
+[0;32mI (55835) idfzk: SmartConfig waiting... 46/60[0m
+[0;32mI (56835) idfzk: SmartConfig waiting... 47/60[0m
+[0;32mI (57835) idfzk: SmartConfig waiting... 48/60[0m
+[0;32mI (58835) idfzk: SmartConfig waiting... 49/60[0m
+[0;32mI (59835) idfzk: SmartConfig waiting... 50/60[0m
+[0;32mI (60835) idfzk: SmartConfig waiting... 51/60[0m
+[0;32mI (61835) idfzk: SmartConfig waiting... 52/60[0m
+[0;32mI (62835) idfzk: SmartConfig waiting... 53/60[0m
+[0;32mI (63835) idfzk: SmartConfig waiting... 54/60[0m
+[0;32mI (64835) idfzk: SmartConfig waiting... 55/60[0m
+[0;32mI (65835) idfzk: SmartConfig waiting... 56/60[0m
+[0;32mI (66835) idfzk: SmartConfig waiting... 57/60[0m
+[0;32mI (67835) idfzk: SmartConfig waiting... 58/60[0m
+[0;32mI (68835) idfzk: SmartConfig waiting... 59/60[0m
+[0;32mI (69835) idfzk: SmartConfig waiting... 60/60[0m
+[0;33mW (69835) idfzk: SmartConfig timeout[0m
+[0;32mI (69835) wifi:ic_disable_sniffer[0m
+[0;32mI (69935) idfzk: gt(c1=0xCE, c2=0xB4) = 3877, offset=0x0001E4A0, base=0x00114FDE, total=0x0013347E[0m
+[0;32mI (69935) idfzk: Reading character at address: 0x0013347E, size: 32 bytes[0m
+[0;32mI (70055) idfzk: Original vs Converted data:[0m
+01 00 01 00 01 00 3F F8  -> 80 80 88 88 88 88 88 FF 
+01 00 01 00 01 00 FF FE  -> 88 88 88 88 88 80 80 00 
+03 80 05 40 09 20 11 10  -> 20 20 10 08 04 02 01 FF 
+21 08 C1 06 01 00 01 00  -> 01 02 04 08 10 20 20 00 
+[0;32mI (70075) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (70085) idfzk: Converted character data (first 16 bytes):[0m
+80 80 88 88 88 88 88 FF 
+88 88 88 88 88 80 80 00 
+[0;32mI (70095) idfzk: Character data (first 16 bytes):[0m
+80 80 88 88 88 88 88 FF 
+88 88 88 88 88 80 80 00 
+... (total 32 bytes)
+[0;32mI (70185) idfzk: gt(c1=0xC1, c2=0xAC) = 2647, offset=0x00014AE0, base=0x00114FDE, total=0x00129ABE[0m
+[0;32mI (70185) idfzk: Reading character at address: 0x00129ABE, size: 32 bytes[0m
+[0;32mI (70315) idfzk: Original vs Converted data:[0m
+00 40 20 40 17 FE 10 80  -> 40 40 42 CC 00 04 44 64 
+00 A0 01 20 F3 FC 10 20  -> 5C 47 F4 44 44 44 04 00 
+10 20 10 20 17 FE 10 20  -> 00 40 20 1F 20 44 44 44 
+10 20 28 20 47 FE 00 00  -> 44 44 7F 44 44 44 44 00 
+[0;32mI (70325) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (70335) idfzk: Converted character data (first 16 bytes):[0m
+40 40 42 CC 00 04 44 64 
+5C 47 F4 44 44 44 04 00 
+[0;32mI (70345) idfzk: Character data (first 16 bytes):[0m
+40 40 42 CC 00 04 44 64 
+5C 47 F4 44 44 44 04 00 
+... (total 32 bytes)
+[0;32mI (70435) idfzk: gt(c1=0xBD, c2=0xD3) = 2310, offset=0x000120C0, base=0x00114FDE, total=0x0012709E[0m
+[0;32mI (70435) idfzk: Reading character at address: 0x0012709E, size: 32 bytes[0m
+[0;32mI (70565) idfzk: Original vs Converted data:[0m
+10 80 10 40 13 FC 10 00  -> 10 10 10 FF 10 50 44 54 
+FD 08 10 90 17 FE 10 40  -> 65 C6 44 64 54 44 40 00 
+18 40 37 FE D0 88 11 08  -> 04 44 82 7F 01 82 82 4A 
+10 90 10 60 51 98 26 04  -> 56 23 22 52 4E 82 02 00 
+[0;32mI (70575) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (70585) idfzk: Converted character data (first 16 bytes):[0m
+10 10 10 FF 10 50 44 54 
+65 C6 44 64 54 44 40 00 
+[0;32mI (70605) idfzk: Character data (first 16 bytes):[0m
+10 10 10 FF 10 50 44 54 
+65 C6 44 64 54 44 40 00 
+... (total 32 bytes)
+[0;32mI (70695) idfzk: gt(c1=0xC7, c2=0xEB) = 3274, offset=0x00019940, base=0x00114FDE, total=0x0012E91E[0m
+[0;32mI (70695) idfzk: Reading character at address: 0x0012E91E, size: 32 bytes[0m
+[0;32mI (70815) idfzk: Original vs Converted data:[0m
+00 40 40 40 27 FC 20 40  -> 40 42 CC 00 00 44 54 54 
+03 F8 00 40 E7 FE 20 00  -> 54 7F 54 54 54 44 40 00 
+23 F8 22 08 23 F8 22 08  -> 00 00 7F 20 10 00 FF 15 
+2B F8 32 08 22 28 02 10  -> 15 15 55 95 7F 00 00 00 
+[0;32mI (70825) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (70845) idfzk: Converted character data (first 16 bytes):[0m
+40 42 CC 00 00 44 54 54 
+54 7F 54 54 54 44 40 00 
+[0;32mI (70855) idfzk: Character data (first 16 bytes):[0m
+40 42 CC 00 00 44 54 54 
+54 7F 54 54 54 44 40 00 
+... (total 32 bytes)
+[0;32mI (70945) idfzk: gt(c1=0xCA, c2=0xB9) = 3506, offset=0x0001B640, base=0x00114FDE, total=0x0013061E[0m
+[0;32mI (70945) idfzk: Reading character at address: 0x0013061E, size: 32 bytes[0m
+[0;32mI (71065) idfzk: Original vs Converted data:[0m
+10 40 10 40 1F FE 20 40  -> 80 60 F8 07 04 E4 24 24 
+20 40 67 FC 64 44 A4 44  -> 24 FF 24 24 24 E4 04 00 
+27 FC 20 40 22 40 21 40  -> 00 00 FF 00 80 81 45 29 
+20 80 21 40 22 30 2C 0E  -> 11 2F 41 41 81 81 80 00 
+[0;32mI (71085) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (71095) idfzk: Converted character data (first 16 bytes):[0m
+80 60 F8 07 04 E4 24 24 
+24 FF 24 24 24 E4 04 00 
+[0;32mI (71105) idfzk: Character data (first 16 bytes):[0m
+80 60 F8 07 04 E4 24 24 
+24 FF 24 24 24 E4 04 00 
+... (total 32 bytes)
+[0;32mI (71195) idfzk: gt(c1=0xD3, c2=0xC3) = 4362, offset=0x00022140, base=0x00114FDE, total=0x0013711E[0m
+[0;32mI (71195) idfzk: Reading character at address: 0x0013711E, size: 32 bytes[0m
+[0;32mI (71325) idfzk: Original vs Converted data:[0m
+00 00 3F F8 21 08 21 08  -> 00 00 FE 22 22 22 22 FE 
+21 08 3F F8 21 08 21 08  -> 22 22 22 22 FE 00 00 00 
+21 08 3F F8 21 08 21 08  -> 80 60 1F 02 02 02 02 7F 
+21 08 41 08 41 28 80 10  -> 02 02 42 82 7F 00 00 00 
+[0;32mI (71335) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (71345) idfzk: Converted character data (first 16 bytes):[0m
+00 00 FE 22 22 22 22 FE 
+22 22 22 22 FE 00 00 00 
+[0;32mI (71365) idfzk: Character data (first 16 bytes):[0m
+00 00 FE 22 22 22 22 FE 
+22 22 22 22 FE 00 00 00 
+... (total 32 bytes)
+[0;32mI (73385) idfzk: ========== Testing font library ==========[0m
+[0;32mI (73385) idfzk: Test 1: Displaying '胖达科技' with 16x16 font[0m
+[0;32mI (73455) idfzk: gt(c1=0xC5, c2=0xD6) = 3065, offset=0x00017F20, base=0x00114FDE, total=0x0012CEFE[0m
+[0;32mI (73455) idfzk: Reading character at address: 0x0012CEFE, size: 32 bytes[0m
+[0;32mI (73585) idfzk: Original vs Converted data:[0m
+00 20 3C 20 25 24 24 A4  -> 00 00 FE 22 22 FE 00 44 
+24 A8 3C 20 25 FC 24 20  -> 58 40 FF 40 50 4C 00 00 
+24 20 3C 20 27 FE 24 20  -> 80 60 1F 42 82 7F 04 04 
+24 20 44 20 54 20 88 20  -> 04 04 FF 04 04 04 04 00 
+[0;32mI (73595) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (73615) idfzk: Converted character data (first 16 bytes):[0m
+00 00 FE 22 22 FE 00 44 
+58 40 FF 40 50 4C 00 00 
+[0;32mI (73625) idfzk: Character data (first 16 bytes):[0m
+00 00 FE 22 22 FE 00 44 
+58 40 FF 40 50 4C 00 00 
+... (total 32 bytes)
+[0;32mI (73715) idfzk: gt(c1=0xB4, c2=0xEF) = 1492, offset=0x0000BA80, base=0x00114FDE, total=0x00120A5E[0m
+[0;32mI (73715) idfzk: Reading character at address: 0x00120A5E, size: 32 bytes[0m
+[0;32mI (73835) idfzk: Original vs Converted data:[0m
+00 40 20 40 10 40 10 40  -> 40 40 42 CC 00 10 10 10 
+07 FE 00 40 F0 40 10 A0  -> 90 7F 90 10 10 10 10 00 
+10 90 11 08 12 04 14 04  -> 00 40 20 1F 20 48 44 42 
+10 00 28 00 47 FE 00 00  -> 41 40 40 41 42 4C 40 00 
+[0;32mI (73845) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (73865) idfzk: Converted character data (first 16 bytes):[0m
+40 40 42 CC 00 10 10 10 
+90 7F 90 10 10 10 10 00 
+[0;32mI (73875) idfzk: Character data (first 16 bytes):[0m
+40 40 42 CC 00 10 10 10 
+90 7F 90 10 10 10 10 00 
+... (total 32 bytes)
+[0;32mI (73965) idfzk: gt(c1=0xBF, c2=0xC6) = 2485, offset=0x000136A0, base=0x00114FDE, total=0x0012867E[0m
+[0;32mI (73965) idfzk: Reading character at address: 0x0012867E, size: 32 bytes[0m
+[0;32mI (74085) idfzk: Original vs Converted data:[0m
+08 10 1D 10 F0 90 10 90  -> 24 24 A4 FE A3 22 00 22 
+10 10 FD 10 10 90 38 90  -> CC 00 00 FF 00 00 00 00 
+34 10 50 1E 53 F0 90 10  -> 08 06 01 FF 00 01 04 04 
+10 10 10 10 10 10 10 10  -> 04 04 04 FF 02 02 02 00 
+[0;32mI (74105) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (74115) idfzk: Converted character data (first 16 bytes):[0m
+24 24 A4 FE A3 22 00 22 
+CC 00 00 FF 00 00 00 00 
+[0;32mI (74125) idfzk: Character data (first 16 bytes):[0m
+24 24 A4 FE A3 22 00 22 
+CC 00 00 FF 00 00 00 00 
+... (total 32 bytes)
+[0;32mI (74215) idfzk: gt(c1=0xBC, c2=0xBC) = 2193, offset=0x00011220, base=0x00114FDE, total=0x001261FE[0m
+[0;32mI (74215) idfzk: Reading character at address: 0x001261FE, size: 32 bytes[0m
+[0;32mI (74345) idfzk: Original vs Converted data:[0m
+10 20 10 20 10 20 13 FE  -> 10 10 10 FF 10 90 08 88 
+FC 20 10 20 10 20 15 FC  -> 88 88 FF 88 88 88 08 00 
+18 84 30 88 D0 48 10 50  -> 04 44 82 7F 01 80 80 40 
+10 20 10 50 51 88 26 06  -> 43 2C 10 28 46 81 80 00 
+[0;32mI (74355) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (74365) idfzk: Converted character data (first 16 bytes):[0m
+10 10 10 FF 10 90 08 88 
+88 88 FF 88 88 88 08 00 
+[0;32mI (74375) idfzk: Character data (first 16 bytes):[0m
+10 10 10 FF 10 90 08 88 
+88 88 FF 88 88 88 08 00 
+... (total 32 bytes)
+[0;32mI (79395) idfzk: Test 2: Displaying '路明电脑' with 12x12 font[0m
+[0;32mI (79505) idfzk: gt(c1=0xC2, c2=0xB7) = 2752, offset=0x00010200, base=0x00093D0E, total=0x000A3F0E[0m
+[0;32mI (79505) idfzk: Reading character at address: 0x000A3F0E, size: 24 bytes[0m
+[0;32mI (79615) idfzk: Original vs Converted data (12x12):[0m
+02 0C F3 CC 94 4C 9A 8C  -> 9E 12 F2 9E 48 C4 AB 92 
+F1 0C 22 8C 2C 6C B7 CC  -> AA C6 40 00 0F 08 07 04 
+A4 4C A4 4C B7 CC C4 4C  -> 00 0F 04 04 04 0F 00 00 
+[0;32mI (79625) idfzk: Converted character data (12x12, first 16 bytes):[0m
+9E 12 F2 9E 48 C4 AB 92 
+AA C6 40 00 0F 08 07 04 
+[0;32mI (79635) idfzk: Character data (first 16 bytes):[0m
+9E 12 F2 9E 48 C4 AB 92 
+AA C6 40 00 0F 08 07 04 
+... (total 24 bytes)
+[0;32mI (79735) idfzk: gt(c1=0xC3, c2=0xF7) = 2910, offset=0x000110D0, base=0x00093D0E, total=0x000A4DDE[0m
+[0;32mI (79735) idfzk: Reading character at address: 0x000A4DDE, size: 24 bytes[0m
+[0;32mI (79845) idfzk: Original vs Converted data (12x12):[0m
+FB EC 8A 2C 8A 2C 8B EC  -> FF 11 11 11 FF 00 FF 49 
+FA 2C 8A 2C 8B EC 8A 2C  -> 49 49 FF 00 03 01 01 01 
+FA 2C 82 2C 04 2C 08 EC  -> 09 04 03 00 08 08 0F 00 
+[0;32mI (79855) idfzk: Converted character data (12x12, first 16 bytes):[0m
+FF 11 11 11 FF 00 FF 49 
+49 49 FF 00 03 01 01 01 
+[0;32mI (79865) idfzk: Character data (first 16 bytes):[0m
+FF 11 11 11 FF 00 FF 49 
+49 49 FF 00 03 01 01 01 
+... (total 24 bytes)
+[0;32mI (79975) idfzk: gt(c1=0xB5, c2=0xE7) = 1578, offset=0x000093F0, base=0x00093D0E, total=0x0009D0FE[0m
+[0;32mI (79975) idfzk: Reading character at address: 0x0009D0FE, size: 24 bytes[0m
+[0;32mI (80075) idfzk: Original vs Converted data (12x12):[0m
+08 0C 08 0C FF 8C 88 8C  -> FC 24 24 24 FF 24 24 24 
+88 8C FF 8C 88 8C 88 8C  -> FC 00 00 00 03 01 01 01 
+FF 8C 88 2C 08 2C 07 EC  -> 07 09 09 09 09 08 0E 00 
+[0;32mI (80085) idfzk: Converted character data (12x12, first 16 bytes):[0m
+FC 24 24 24 FF 24 24 24 
+FC 00 00 00 03 01 01 01 
+[0;32mI (80095) idfzk: Character data (first 16 bytes):[0m
+FC 24 24 24 FF 24 24 24 
+FC 00 00 00 03 01 01 01 
+... (total 24 bytes)
+[0;32mI (80205) idfzk: gt(c1=0xC4, c2=0xD4) = 2969, offset=0x00011658, base=0x00093D0E, total=0x000A5366[0m
+[0;32mI (80205) idfzk: Reading character at address: 0x000A5366, size: 24 bytes[0m
+[0;32mI (80315) idfzk: Original vs Converted data (12x12):[0m
+01 0C 70 8C 57 EC 50 0C  -> 00 FE 92 FE 00 E4 04 15 
+71 4C 54 AC 54 AC 74 AC  -> E6 14 E4 00 08 07 08 0F 
+55 6C 54 2C 57 EC B0 2C  -> 00 07 04 05 04 05 0F 00 
+[0;32mI (80325) idfzk: Converted character data (12x12, first 16 bytes):[0m
+00 FE 92 FE 00 E4 04 15 
+E6 14 E4 00 08 07 08 0F 
+[0;32mI (80335) idfzk: Character data (first 16 bytes):[0m
+00 FE 92 FE 00 E4 04 15 
+E6 14 E4 00 08 07 08 0F 
+... (total 24 bytes)
+[0;32mI (85345) idfzk: Test 3: Displaying '路明电脑' with 24x24 font[0m
+[0;32mI (85465) idfzk: gt(c1=0xC2, c2=0xB7) = 2752, offset=0x00030600, base=0x001F43DE, total=0x002249DE[0m
+[0;32mI (85465) idfzk: Reading character at address: 0x002249DE, size: 72 bytes[0m
+[0;32mI (85625) idfzk: Original vs Converted data (24x24):[0m
+00 02 00 10 C3 80 1F E3  -> 00 00 00 FE FC 04 04 04 
+00 18 C6 18 18 C7 FC 18  -> FE FE 04 80 E0 78 9F 16 
+CC 30 18 CC 30 18 DA 60  -> 12 90 F0 78 18 10 00 00 
+1F D3 60 13 21 C0 03 01  -> 00 00 F8 F3 11 01 FF FF 
+C0 23 03 60 3B 46 30 33  -> 21 B1 62 41 A0 B0 99 8F 
+EC 1C 33 30 0F 33 4F F4  -> 86 8F 99 B0 60 E0 40 40 
+33 0C 30 33 0C 30 33 EC  -> 10 30 1F 1F 08 08 0F 0F 
+30 3F 0C 30 F0 0C 30 40  -> 04 04 04 00 FF 7F 20 20 
+0F F0 00 0C 30 00 08 20  -> 20 20 FF 7F 00 00 00 00 
+[0;32mI (85655) idfzk: Converted character data (24x24, first 16 bytes):[0m
+00 00 00 FE FC 04 04 04 
+FE FE 04 80 E0 78 9F 16 
+[0;32mI (85665) idfzk: Character data (first 16 bytes):[0m
+00 00 00 FE FC 04 04 04 
+FE FE 04 80 E0 78 9F 16 
+... (total 72 bytes)
+[0;32mI (85735) idfzk: gt(c1=0xC3, c2=0xF7) = 2910, offset=0x00033270, base=0x001F43DE, total=0x0022764E[0m
+[0;32mI (85735) idfzk: Reading character at address: 0x0022764E, size: 72 bytes[0m
+[0;32mI (85885) idfzk: Original vs Converted data (24x24):[0m
+00 00 00 00 04 18 10 C7  -> 00 00 00 FC F8 08 08 08 
+FC 1F E6 18 18 C6 18 18  -> FC FC 08 00 00 FE FC 04 
+C6 18 18 C6 18 18 C6 18  -> 04 04 04 FE FE 04 00 00 
+18 C7 F8 18 C6 18 1F C6  -> 00 00 00 FF FF 04 04 04 
+18 18 C6 18 18 C6 18 18  -> FF FF 00 00 00 FF FF 41 
+C6 18 18 C7 F8 18 C6 18  -> 41 41 41 FF FF 00 00 00 
+18 CC 18 1F CC 18 18 D8  -> 00 00 00 1F 0F 02 02 82 
+18 18 98 18 10 30 18 00  -> 4F 27 30 1C 0F 03 00 00 
+60 F8 00 80 30 01 00 20  -> 20 20 E0 7F 3F 00 00 00 
+[0;32mI (85925) idfzk: Converted character data (24x24, first 16 bytes):[0m
+00 00 00 FC F8 08 08 08 
+FC FC 08 00 00 FE FC 04 
+[0;32mI (85935) idfzk: Character data (first 16 bytes):[0m
+00 00 00 FC F8 08 08 08 
+FC FC 08 00 00 FE FC 04 
+... (total 72 bytes)
+[0;32mI (86005) idfzk: gt(c1=0xB5, c2=0xE7) = 1578, offset=0x0001BBD0, base=0x001F43DE, total=0x0020FFAE[0m
+[0;32mI (86005) idfzk: Reading character at address: 0x0020FFAE, size: 72 bytes[0m
+[0;32mI (86155) idfzk: Original vs Converted data (24x24):[0m
+00 20 00 00 38 00 00 30  -> 00 00 00 F0 E0 20 20 20 
+00 00 30 00 10 30 60 1F  -> 20 20 FF FE 22 20 20 20 
+FF F0 18 30 60 18 30 60  -> 20 F0 F0 20 00 00 00 00 
+18 30 60 18 30 60 1F FF  -> 00 00 00 FF FF 84 84 84 
+E0 18 30 60 18 30 60 18  -> 84 84 FF FF 84 84 84 84 
+30 60 18 30 60 1F FF E0  -> 84 FF FF 00 00 00 00 00 
+18 30 40 10 30 04 00 30  -> 00 00 00 03 01 00 00 00 
+04 00 30 04 00 30 06 00  -> 00 00 3F 7F 60 60 60 60 
+3F FE 00 1F FC 00 00 00  -> 60 61 60 60 60 7E 30 00 
+[0;32mI (86185) idfzk: Converted character data (24x24, first 16 bytes):[0m
+00 00 00 F0 E0 20 20 20 
+20 20 FF FE 22 20 20 20 
+[0;32mI (86205) idfzk: Character data (first 16 bytes):[0m
+00 00 00 F0 E0 20 20 20 
+20 20 FF FE 22 20 20 20 
+... (total 72 bytes)
+[0;32mI (86265) idfzk: gt(c1=0xC4, c2=0xD4) = 2969, offset=0x00034308, base=0x001F43DE, total=0x002286E6[0m
+[0;32mI (86265) idfzk: Reading character at address: 0x002286E6, size: 72 bytes[0m
+[0;32mI (86425) idfzk: Original vs Converted data (24x24):[0m
+00 06 00 23 03 00 3F 81  -> 00 00 FE FC 04 04 FE FE 
+80 33 01 00 33 00 0C 33  -> 04 20 20 20 20 A1 23 2E 
+7F FE 33 00 00 33 04 40  -> 24 A0 20 20 30 30 20 00 
+3F 22 68 33 3A CE 33 32  -> 00 00 FF FF 21 21 FF FF 
+CC 33 31 8C 33 31 8C 3F  -> 00 00 FF FE 02 00 C7 78 
+31 8C 33 33 CC 33 32 CC  -> FE C7 01 00 FF FE 02 00 
+33 34 6C 33 34 6C 33 38  -> 40 30 1F 07 20 60 7F 3F 
+4C 23 30 0C 63 30 0C 4F  -> 00 20 7F 3F 24 23 20 20 
+7F FC 86 20 0C 00 00 00  -> 20 27 23 20 7F 7F 00 00 
+[0;32mI (86455) idfzk: Converted character data (24x24, first 16 bytes):[0m
+00 00 FE FC 04 04 FE FE 
+04 20 20 20 20 A1 23 2E 
+[0;32mI (86465) idfzk: Character data (first 16 bytes):[0m
+00 00 FE FC 04 04 FE FE 
+04 20 20 20 20 A1 23 2E 
+... (total 72 bytes)
+[0;32mI (91485) idfzk: Test 4: Displaying '江西省萍乡市' with 12x12 font[0m
+[0;32mI (91565) idfzk: gt(c1=0xBD, c2=0xAD) = 2272, offset=0x0000D500, base=0x00093D0E, total=0x000A120E[0m
+[0;32mI (91565) idfzk: Reading character at address: 0x000A120E, size: 24 bytes[0m
+[0;32mI (91675) idfzk: Original vs Converted data (12x12):[0m
+00 0C 9F CC 42 0C 02 0C  -> 22 44 00 02 02 02 FE 02 
+02 0C 82 0C 42 0C 02 0C  -> 02 02 00 00 04 02 09 08 
+22 0C 42 0C 82 0C 3F EC  -> 08 08 0F 08 08 08 08 00 
+[0;32mI (91685) idfzk: Converted character data (12x12, first 16 bytes):[0m
+22 44 00 02 02 02 FE 02 
+02 02 00 00 04 02 09 08 
+[0;32mI (91695) idfzk: Character data (first 16 bytes):[0m
+22 44 00 02 02 02 FE 02 
+02 02 00 00 04 02 09 08 
+... (total 24 bytes)
+[0;32mI (91795) idfzk: gt(c1=0xCE, c2=0xF7) = 3944, offset=0x000171C0, base=0x00093D0E, total=0x000AAECE[0m
+[0;32mI (91805) idfzk: Reading character at address: 0x000AAECE, size: 24 bytes[0m
+[0;32mI (91905) idfzk: Original vs Converted data (12x12):[0m
+FF EC 0A 0C 0A 0C 7F CC  -> 01 F9 09 89 7F 09 7F 89 
+4A 4C 4A 4C 4A 4C 51 CC  -> 89 F9 01 00 00 0F 05 04 
+60 4C 40 4C 7F CC 40 4C  -> 04 04 04 04 04 0F 00 00 
+[0;32mI (91915) idfzk: Converted character data (12x12, first 16 bytes):[0m
+01 F9 09 89 7F 09 7F 89 
+89 F9 01 00 00 0F 05 04 
+[0;32mI (91925) idfzk: Character data (first 16 bytes):[0m
+01 F9 09 89 7F 09 7F 89 
+89 F9 01 00 00 0F 05 04 
+... (total 24 bytes)
+[0;32mI (92035) idfzk: gt(c1=0xCA, c2=0xA1) = 3482, offset=0x00014670, base=0x00093D0E, total=0x000A837E[0m
+[0;32mI (92035) idfzk: Reading character at address: 0x000A837E, size: 24 bytes[0m
+[0;32mI (92145) idfzk: Original vs Converted data (12x12):[0m
+04 0C 24 8C 45 4C 86 2C  -> 28 24 E2 B0 B0 AF A8 A4 
+18 0C FF CC 20 4C 3F CC  -> A2 E4 08 00 00 00 0F 0A 
+20 4C 3F CC 20 4C 3F CC  -> 0A 0A 0A 0A 0A 0F 00 00 
+[0;32mI (92155) idfzk: Converted character data (12x12, first 16 bytes):[0m
+28 24 E2 B0 B0 AF A8 A4 
+A2 E4 08 00 00 00 0F 0A 
+[0;32mI (92165) idfzk: Character data (first 16 bytes):[0m
+28 24 E2 B0 B0 AF A8 A4 
+A2 E4 08 00 00 00 0F 0A 
+... (total 24 bytes)
+[0;32mI (92265) idfzk: gt(c1=0xC6, c2=0xBC) = 3133, offset=0x000125B8, base=0x00093D0E, total=0x000A62C6[0m
+[0;32mI (92265) idfzk: Reading character at address: 0x000A62C6, size: 24 bytes[0m
+[0;32mI (92375) idfzk: Original vs Converted data (12x12):[0m
+11 0C FF EC 11 0C 80 0C  -> 4A 92 02 57 92 12 F2 17 
+5F CC 02 0C 92 4C 4A 8C  -> 92 52 02 00 08 04 01 01 
+3F EC 02 0C 42 0C 82 0C  -> 01 01 0F 01 01 01 01 00 
+[0;32mI (92385) idfzk: Converted character data (12x12, first 16 bytes):[0m
+4A 92 02 57 92 12 F2 17 
+92 52 02 00 08 04 01 01 
+[0;32mI (92395) idfzk: Character data (first 16 bytes):[0m
+4A 92 02 57 92 12 F2 17 
+92 52 02 00 08 04 01 01 
+... (total 24 bytes)
+[0;32mI (92505) idfzk: gt(c1=0xCF, c2=0xE7) = 4022, offset=0x00017910, base=0x00093D0E, total=0x000AB61E[0m
+[0;32mI (92505) idfzk: Reading character at address: 0x000AB61E, size: 24 bytes[0m
+[0;32mI (92615) idfzk: Original vs Converted data (12x12):[0m
+08 0C 10 0C 20 8C 41 0C  -> 00 98 D4 D2 B1 B0 90 88 
+7E 0C 0C 2C 30 2C 7F CC  -> 84 80 60 00 08 08 08 08 
+00 8C 03 0C 0C 0C F0 0C  -> 04 04 02 02 01 00 00 00 
+[0;32mI (92615) idfzk: Converted character data (12x12, first 16 bytes):[0m
+00 98 D4 D2 B1 B0 90 88 
+84 80 60 00 08 08 08 08 
+[0;32mI (92635) idfzk: Character data (first 16 bytes):[0m
+00 98 D4 D2 B1 B0 90 88 
+84 80 60 00 08 08 08 08 
+... (total 24 bytes)
+[0;32mI (92735) idfzk: gt(c1=0xCA, c2=0xD0) = 3529, offset=0x00014AD8, base=0x00093D0E, total=0x000A87E6[0m
+[0;32mI (92735) idfzk: Reading character at address: 0x000A87E6, size: 24 bytes[0m
+[0;32mI (92845) idfzk: Original vs Converted data (12x12):[0m
+08 0C 04 0C FF EC 04 0C  -> 04 E4 24 24 25 FE 24 24 
+04 0C 7F CC 44 4C 44 4C  -> 24 E4 04 00 00 07 00 00 
+44 4C 44 4C 44 CC 04 0C  -> 00 0F 00 00 04 07 00 00 
+[0;32mI (92855) idfzk: Converted character data (12x12, first 16 bytes):[0m
+04 E4 24 24 25 FE 24 24 
+24 E4 04 00 00 07 00 00 
+[0;32mI (92865) idfzk: Character data (first 16 bytes):[0m
+04 E4 24 24 25 FE 24 24 
+24 E4 04 00 00 07 00 00 
+... (total 24 bytes)
+[0;32mI (97875) idfzk: Test 5: Displaying '江西省萍乡市' with 16x16 font[0m
+[0;32mI (97995) idfzk: gt(c1=0xBD, c2=0xAD) = 2272, offset=0x00011C00, base=0x00114FDE, total=0x00126BDE[0m
+[0;32mI (97995) idfzk: Reading character at address: 0x00126BDE, size: 32 bytes[0m
+[0;32mI (98115) idfzk: Original vs Converted data:[0m
+00 00 20 00 17 FC 10 40  -> 10 60 02 0C C0 04 04 04 
+80 40 40 40 48 40 08 40  -> 04 FC 04 04 04 04 00 00 
+10 40 10 40 E0 40 20 40  -> 04 04 7C 03 20 20 20 20 
+20 40 2F FE 20 00 00 00  -> 20 3F 20 20 20 20 20 00 
+[0;32mI (98135) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (98145) idfzk: Converted character data (first 16 bytes):[0m
+10 60 02 0C C0 04 04 04 
+04 FC 04 04 04 04 00 00 
+[0;32mI (98155) idfzk: Character data (first 16 bytes):[0m
+10 60 02 0C C0 04 04 04 
+04 FC 04 04 04 04 00 00 
+... (total 32 bytes)
+[0;32mI (98245) idfzk: gt(c1=0xCE, c2=0xF7) = 3944, offset=0x0001ED00, base=0x00114FDE, total=0x00133CDE[0m
+[0;32mI (98245) idfzk: Reading character at address: 0x00133CDE, size: 32 bytes[0m
+[0;32mI (98375) idfzk: Original vs Converted data:[0m
+00 00 FF FE 04 40 04 40  -> 02 02 E2 22 22 FE 22 22 
+04 40 3F F8 24 48 24 48  -> 22 FE 22 22 E2 02 02 00 
+24 48 24 48 28 38 30 08  -> 00 00 FF 48 44 43 40 40 
+20 08 20 08 3F F8 20 08  -> 40 43 44 44 FF 00 00 00 
+[0;32mI (98385) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (98405) idfzk: Converted character data (first 16 bytes):[0m
+02 02 E2 22 22 FE 22 22 
+22 FE 22 22 E2 02 02 00 
+[0;32mI (98415) idfzk: Character data (first 16 bytes):[0m
+02 02 E2 22 22 FE 22 22 
+22 FE 22 22 E2 02 02 00 
+... (total 32 bytes)
+[0;32mI (98505) idfzk: gt(c1=0xCA, c2=0xA1) = 3482, offset=0x0001B340, base=0x00114FDE, total=0x0013031E[0m
+[0;32mI (98505) idfzk: Reading character at address: 0x0013031E, size: 32 bytes[0m
+[0;32mI (98625) idfzk: Original vs Converted data:[0m
+01 00 11 10 11 08 21 24  -> 00 10 88 86 C0 C0 A0 AF 
+40 C0 03 00 0C 00 3F F8  -> 90 90 88 82 84 08 00 00 
+D0 08 1F F8 10 08 1F F8  -> 01 01 00 FF 4A 4A 4A 4A 
+10 08 10 08 1F F8 10 08  -> 4A 4A 4A 4A FF 00 00 00 
+[0;32mI (98635) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (98655) idfzk: Converted character data (first 16 bytes):[0m
+00 10 88 86 C0 C0 A0 AF 
+90 90 88 82 84 08 00 00 
+[0;32mI (98665) idfzk: Character data (first 16 bytes):[0m
+00 10 88 86 C0 C0 A0 AF 
+90 90 88 82 84 08 00 00 
+... (total 32 bytes)
+[0;32mI (98755) idfzk: gt(c1=0xC6, c2=0xBC) = 3133, offset=0x000187A0, base=0x00114FDE, total=0x0012D77E[0m
+[0;32mI (98755) idfzk: Reading character at address: 0x0012D77E, size: 32 bytes[0m
+[0;32mI (98875) idfzk: Original vs Converted data:[0m
+08 20 08 20 FF FE 08 20  -> 44 84 14 64 0F 24 A4 24 
+20 00 17 FC 90 40 42 48  -> 24 E4 2F 24 A4 24 04 00 
+49 50 08 40 17 FE E0 40  -> 08 09 78 04 03 04 04 05 
+20 40 20 40 20 40 00 40  -> 04 FF 04 05 04 04 04 00 
+[0;32mI (98895) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (98905) idfzk: Converted character data (first 16 bytes):[0m
+44 84 14 64 0F 24 A4 24 
+24 E4 2F 24 A4 24 04 00 
+[0;32mI (98915) idfzk: Character data (first 16 bytes):[0m
+44 84 14 64 0F 24 A4 24 
+24 E4 2F 24 A4 24 04 00 
+... (total 32 bytes)
+[0;32mI (99005) idfzk: gt(c1=0xCF, c2=0xE7) = 4022, offset=0x0001F6C0, base=0x00114FDE, total=0x0013469E[0m
+[0;32mI (99005) idfzk: Reading character at address: 0x0013469E, size: 32 bytes[0m
+[0;32mI (99135) idfzk: Original vs Converted data:[0m
+02 00 02 00 04 20 08 20  -> 00 00 20 30 28 24 A3 60 
+10 40 3F 80 01 08 02 08  -> 20 10 0C 00 C0 00 00 00 
+04 10 1F E0 00 40 00 80  -> 80 80 80 42 42 23 22 12 
+01 00 06 00 18 00 E0 00  -> 0A 06 02 01 00 00 00 00 
+[0;32mI (99145) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (99155) idfzk: Converted character data (first 16 bytes):[0m
+00 00 20 30 28 24 A3 60 
+20 10 0C 00 C0 00 00 00 
+[0;32mI (99165) idfzk: Character data (first 16 bytes):[0m
+00 00 20 30 28 24 A3 60 
+20 10 0C 00 C0 00 00 00 
+... (total 32 bytes)
+[0;32mI (99255) idfzk: gt(c1=0xCA, c2=0xD0) = 3529, offset=0x0001B920, base=0x00114FDE, total=0x001308FE[0m
+[0;32mI (99255) idfzk: Reading character at address: 0x001308FE, size: 32 bytes[0m
+[0;32mI (99385) idfzk: Original vs Converted data:[0m
+02 00 01 00 00 00 7F FC  -> 00 08 88 88 88 88 89 FA 
+01 00 01 00 01 00 3F F8  -> 88 88 88 88 88 08 00 00 
+21 08 21 08 21 08 21 08  -> 00 00 3F 00 00 00 00 FF 
+21 28 21 10 01 00 01 00  -> 00 00 10 20 1F 00 00 00 
+[0;32mI (99395) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (99415) idfzk: Converted character data (first 16 bytes):[0m
+00 08 88 88 88 88 89 FA 
+88 88 88 88 88 08 00 00 
+[0;32mI (99425) idfzk: Character data (first 16 bytes):[0m
+00 08 88 88 88 88 89 FA 
+88 88 88 88 88 08 00 00 
+... (total 32 bytes)
+[0;32mI (104435) idfzk: Test 6: Displaying '江西省萍乡市' with 24x24 font[0m
+[0;32mI (104545) idfzk: gt(c1=0xBD, c2=0xAD) = 2272, offset=0x00027F00, base=0x001F43DE, total=0x0021C2DE[0m
+[0;32mI (104545) idfzk: Reading character at address: 0x0021C2DE, size: 72 bytes[0m
+[0;32mI (104695) idfzk: Original vs Converted data (24x24):[0m
+00 00 00 30 00 00 18 00  -> 00 80 82 06 1C 08 00 C0 
+00 0C 00 18 08 FF FC 00  -> 10 10 10 10 10 10 F0 F0 
+03 00 01 03 00 61 03 00  -> 10 10 10 18 18 10 00 00 
+32 03 00 1A 03 00 12 03  -> 00 80 81 C7 E2 18 07 00 
+00 04 03 00 04 03 00 08  -> 00 00 00 00 00 00 FF FF 
+03 00 18 03 00 78 03 00  -> 00 00 00 00 00 00 00 00 
+18 03 00 18 03 00 18 03  -> 00 00 00 3F 7F 00 00 10 
+00 18 03 0C 19 FF FE 18  -> 10 10 10 10 10 10 1F 1F 
+00 00 08 00 00 00 00 00  -> 10 10 10 10 18 18 10 00 
+[0;32mI (104735) idfzk: Converted character data (24x24, first 16 bytes):[0m
+00 80 82 06 1C 08 00 C0 
+10 10 10 10 10 10 F0 F0 
+[0;32mI (104745) idfzk: Character data (first 16 bytes):[0m
+00 80 82 06 1C 08 00 C0 
+10 10 10 10 10 10 F0 F0 
+... (total 72 bytes)
+[0;32mI (104805) idfzk: gt(c1=0xCE, c2=0xF7) = 3944, offset=0x00045540, base=0x001F43DE, total=0x0023991E[0m
+[0;32mI (104805) idfzk: Reading character at address: 0x0023991E, size: 72 bytes[0m
+[0;32mI (104965) idfzk: Original vs Converted data (24x24):[0m
+00 00 00 00 00 00 00 00  -> 00 08 08 88 08 08 08 08 
+0C 7F FF FE 00 C6 00 00  -> F8 F8 08 08 08 F8 F8 08 
+C6 00 00 C6 00 10 C6 18  -> 08 08 08 88 8C 0C 08 00 
+1F FF FC 18 C6 18 18 C6  -> 00 00 00 FF FF 01 81 C1 
+18 18 C6 18 18 C6 18 18  -> 7F 3F 01 01 01 7F FF C1 
+C6 18 19 87 D8 1B 03 F8  -> C1 C1 81 FF FF 01 00 00 
+1A 00 18 1C 00 18 18 00  -> 00 00 00 7F 3F 12 11 10 
+18 18 00 18 1F FF F8 18  -> 10 10 10 10 10 10 10 10 
+00 18 10 00 10 00 00 00  -> 10 10 10 7F 3F 00 00 00 
+[0;32mI (105005) idfzk: Converted character data (24x24, first 16 bytes):[0m
+00 08 08 88 08 08 08 08 
+F8 F8 08 08 08 F8 F8 08 
+[0;32mI (105015) idfzk: Character data (first 16 bytes):[0m
+00 08 08 88 08 08 08 08 
+F8 F8 08 08 08 F8 F8 08 
+... (total 72 bytes)
+[0;32mI (105075) idfzk: gt(c1=0xCA, c2=0xA1) = 3482, offset=0x0003D350, base=0x001F43DE, total=0x0023172E[0m
+[0;32mI (105075) idfzk: Reading character at address: 0x0023172E, size: 72 bytes[0m
+[0;32mI (105235) idfzk: Original vs Converted data (24x24):[0m
+00 10 00 00 1C 00 02 18  -> 00 00 00 00 C0 70 3C 18 
+80 03 98 60 07 18 30 06  -> 08 00 00 7F 3E 82 C0 60 
+19 18 0C 13 CC 08 06 08  -> 44 48 18 30 E0 40 00 00 
+10 1C 00 22 70 60 03 FF  -> 00 40 22 21 10 10 FE FC 
+F0 03 00 60 0F 00 60 33  -> 44 46 46 47 45 45 44 44 
+00 60 43 FF E0 03 00 60  -> 44 FE FE 04 00 00 00 00 
+03 00 60 03 FF E0 03 00  -> 00 00 00 00 00 00 FF 7F 
+60 03 00 60 03 00 60 03  -> 22 22 22 22 22 22 22 22 
+FF E0 03 00 60 02 00 40  -> 22 FF 7F 00 00 00 00 00 
+[0;32mI (105265) idfzk: Converted character data (24x24, first 16 bytes):[0m
+00 00 00 00 C0 70 3C 18 
+08 00 00 7F 3E 82 C0 60 
+[0;32mI (105285) idfzk: Character data (first 16 bytes):[0m
+00 00 00 00 C0 70 3C 18 
+08 00 00 7F 3E 82 C0 60 
+... (total 72 bytes)
+[0;32mI (105345) idfzk: gt(c1=0xC6, c2=0xBC) = 3133, offset=0x00037128, base=0x001F43DE, total=0x0022B506[0m
+[0;32mI (105345) idfzk: Reading character at address: 0x0022B506, size: 72 bytes[0m
+[0;32mI (105495) idfzk: Original vs Converted data (24x24):[0m
+01 02 00 01 C3 80 01 83  -> 00 08 08 48 C8 88 08 3F 
+0C 7F FF FE 01 83 00 01  -> BE 8A 88 88 88 88 BF BE 
+83 00 18 00 18 0C FF FC  -> 8A 88 88 C8 CC 8C 08 00 
+06 03 00 04 03 10 61 63  -> 00 04 0C 38 10 C3 31 8C 
+1C 31 33 30 1A 1B 20 12  -> 80 84 8C B8 90 80 FF FF 
+13 40 04 03 0C 05 FF FE  -> 80 A0 98 8E C4 C4 80 00 
+0C 03 00 7C 03 00 0C 03  -> 00 02 02 02 3F 7F 00 00 
+00 0C 03 00 0C 03 00 0C  -> 00 00 00 00 00 00 FF 7F 
+03 00 04 03 00 00 02 00  -> 00 00 00 00 00 00 00 00 
+[0;32mI (105535) idfzk: Converted character data (24x24, first 16 bytes):[0m
+00 08 08 48 C8 88 08 3F 
+BE 8A 88 88 88 88 BF BE 
+[0;32mI (105545) idfzk: Character data (first 16 bytes):[0m
+00 08 08 48 C8 88 08 3F 
+BE 8A 88 88 88 88 BF BE 
+... (total 72 bytes)
+[0;32mI (105615) idfzk: gt(c1=0xCF, c2=0xE7) = 4022, offset=0x00046B30, base=0x001F43DE, total=0x0023AF0E[0m
+[0;32mI (105615) idfzk: Reading character at address: 0x0023AF0E, size: 72 bytes[0m
+[0;32mI (105765) idfzk: Original vs Converted data (24x24):[0m
+00 10 00 00 18 00 00 3C  -> 00 00 00 00 00 00 80 40 
+00 00 30 00 00 60 40 00  -> 60 30 1C 0F 06 04 00 80 
+C0 60 01 80 F0 02 01 C0  -> C0 F0 60 40 00 00 00 00 
+0F FF 00 07 06 00 00 0C  -> 00 00 00 00 01 43 C3 E3 
+00 00 38 20 00 E0 38 01  -> D1 D1 59 49 4D 47 43 41 
+00 70 07 FF E0 03 C0 C0  -> C0 E0 78 30 10 00 00 00 
+00 01 80 00 03 00 00 06  -> 00 00 80 80 40 40 40 20 
+00 00 1C 00 00 70 00 01  -> 20 30 10 18 08 0C 06 03 
+C0 00 0E 00 00 30 00 00  -> 01 00 00 00 00 00 00 00 
+[0;32mI (105805) idfzk: Converted character data (24x24, first 16 bytes):[0m
+00 00 00 00 00 00 80 40 
+60 30 1C 0F 06 04 00 80 
+[0;32mI (105815) idfzk: Character data (first 16 bytes):[0m
+00 00 00 00 00 00 80 40 
+60 30 1C 0F 06 04 00 80 
+... (total 72 bytes)
+[0;32mI (105875) idfzk: gt(c1=0xCA, c2=0xD0) = 3529, offset=0x0003E088, base=0x001F43DE, total=0x00232466[0m
+[0;32mI (105875) idfzk: Reading character at address: 0x00232466, size: 72 bytes[0m
+[0;32mI (106035) idfzk: Original vs Converted data (24x24):[0m
+00 30 00 00 18 00 00 0C  -> 00 10 10 10 90 10 10 10 
+00 00 08 0C 7F FF FE 00  -> 10 10 11 F3 FE 14 10 10 
+18 00 00 18 00 08 18 30  -> 10 10 90 90 18 18 10 00 
+0F FF F8 0C 18 30 0C 18  -> 00 00 00 00 FF FF 01 01 
+30 0C 18 30 0C 18 30 0C  -> 01 01 01 FF FF 01 01 01 
+18 30 0C 18 30 0C 18 30  -> 01 01 FF FF 01 00 00 00 
+0C 18 30 0C 18 30 0C 19  -> 00 00 00 00 1F 0F 00 00 
+F0 0C 18 60 08 18 40 00  -> 00 00 00 FF 7F 00 00 04 
+18 00 00 18 00 00 10 00  -> 04 1C 0F 07 00 00 00 00 
+[0;32mI (106075) idfzk: Converted character data (24x24, first 16 bytes):[0m
+00 10 10 10 90 10 10 10 
+10 10 11 F3 FE 14 10 10 
+[0;32mI (106085) idfzk: Character data (first 16 bytes):[0m
+00 10 10 10 90 10 10 10 
+10 10 11 F3 FE 14 10 10 
+... (total 72 bytes)
+[0;32mI (111095) idfzk: ========== Font library test completed ==========[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0xb (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2db0
+entry 0x403c8914
+[0;32mI (27) boot: ESP-IDF v5.3 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar 30 2026 12:24:05[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (79) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (86) boot:  3 ota_0            OTA app          00 10 00020000 00400000[0m
+[0;32mI (94) boot:  4 ota_1            OTA app          00 11 00420000 00400000[0m
+[0;32mI (101) boot:  5 assets           Unknown data     01 82 00820000 007e0000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (113) esp_image: segment 0: paddr=00020020 vaddr=3c0b0020 size=26008h (155656) map[0m
+[0;32mI (150) esp_image: segment 1: paddr=00046030 vaddr=3fc9ab00 size=04dcch ( 19916) load[0m
+[0;32mI (154) esp_image: segment 2: paddr=0004ae04 vaddr=40374000 size=05214h ( 21012) load[0m
+[0;32mI (160) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=a0178h (655736) map[0m
+[0;32mI (282) esp_image: segment 4: paddr=000f01a0 vaddr=40379214 size=117fch ( 71676) load[0m
+[0;32mI (307) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (307) boot: Disabling RNG early entropy source...[0m
+[0;32mI (319) cpu_start: Multicore app[0m
+[0;32mI (328) cpu_start: Pro cpu start user code[0m
+[0;32mI (328) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (328) app_init: Application information:[0m
+[0;32mI (331) app_init: Project name:     idfzk[0m
+[0;32mI (336) app_init: App version:      1[0m
+[0;32mI (340) app_init: Compile time:     Mar 30 2026 12:23:50[0m
+[0;32mI (346) app_init: ELF file SHA256:  ae1d37547...[0m
+[0;32mI (351) app_init: ESP-IDF:          v5.3[0m
+[0;32mI (356) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (361) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (366) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (371) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (378) heap_init: At 3FCA3B68 len 00045BA8 (278 KiB): RAM[0m
+[0;32mI (384) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (390) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (396) heap_init: At 600FE100 len 00001EE8 (7 KiB): RTCRAM[0m
+[0;32mI (404) spi_flash: detected chip: generic[0m
+[0;32mI (407) spi_flash: flash io: dio[0m
+[0;32mI (411) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (418) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (425) main_task: Started on CPU0[0m
+[0;32mI (455) main_task: Calling app_main()[0m
+[0;32mI (455) idfzk: Initializing ESP32-S3 OLED display module[0m
+[0;32mI (455) idfzk: Initializing SPIFFS...[0m
+[0;32mI (915) idfzk: SPIFFS initialized successfully[0m
+[0;32mI (915) idfzk: Partition size: total: 7582961, used: 4360874[0m
+[0;32mI (915) idfzk: Loading font file: /spiffs/GT32L24M0140.bin[0m
+[0;32mI (915) idfzk: Font file size: 4194304 bytes[0m
+[0;32mI (925) idfzk: Font file loaded successfully[0m
+[0;32mI (925) idfzk: Loading uni2gbk mapping file: /spiffs/uni2gbk.bin[0m
+[0;32mI (1065) idfzk: Uni2gbk file size: 131072 bytes[0m
+[0;32mI (1065) idfzk: Uni2gbk file loaded successfully[0m
+[0;32mI (1065) idfzk: Testing font file first 16 bytes:[0m
+FF FF FF FF FF FF FF FF 
+FF FF FF FF FF FF FF FF 
+[0;32mI (1065) idfzk: 
+========== Testing uni2gbk conversion ==========[0m
+[0;32mI (1075) idfzk: 江: hardcoded=0xBDAD, file=0xBDAD, PASS[0m
+[0;32mI (1275) idfzk: 西: hardcoded=0xCEF7, file=0xCEF7, PASS[0m
+[0;32mI (1465) idfzk: 省: hardcoded=0xCAA1, file=0xCAA1, PASS[0m
+[0;32mI (1665) idfzk: 萍: hardcoded=0xC6BC, file=0xC6BC, PASS[0m
+[0;32mI (1855) idfzk: 乡: hardcoded=0xCFE7, file=0xCFE7, PASS[0m
+[0;32mI (2045) idfzk: 市: hardcoded=0xCAD0, file=0xCAD0, PASS[0m
+[0;32mI (2235) idfzk: 胖: hardcoded=0xC5D6, file=0xC5D6, PASS[0m
+[0;32mI (2435) idfzk: 达: hardcoded=0xB4EF, file=0xB4EF, PASS[0m
+[0;32mI (2625) idfzk: 科: hardcoded=0xBFC6, file=0xBFC6, PASS[0m
+[0;32mI (2815) idfzk: 技: hardcoded=0xBCBC, file=0xBCBC, PASS[0m
+[0;32mI (3015) idfzk: 路: hardcoded=0xC2B7, file=0xC2B7, PASS[0m
+[0;32mI (3205) idfzk: 明: hardcoded=0xC3F7, file=0xC3F7, PASS[0m
+[0;32mI (3395) idfzk: 电: hardcoded=0xB5E7, file=0xB5E7, PASS[0m
+[0;32mI (3585) idfzk: 脑: hardcoded=0xC4D4, file=0xC4D4, PASS[0m
+[0;32mI (3785) idfzk: 中: hardcoded=0xD6D0, file=0xD6D0, PASS[0m
+[0;32mI (3975) idfzk: 国: hardcoded=0xB9FA, file=0xB9FA, PASS[0m
+[0;32mI (4165) idfzk: 人: hardcoded=0xC8CB, file=0xC8CB, PASS[0m
+[0;32mI (4355) idfzk: 民: hardcoded=0xC3F1, file=0xC3F1, PASS[0m
+[0;32mI (4555) idfzk: 这: hardcoded=0xD5E2, file=0xD5E2, PASS[0m
+[0;32mI (4745) idfzk: 是: hardcoded=0xCAC7, file=0xCAC7, PASS[0m
+[0;32mI (4935) idfzk: 第: hardcoded=0xB5DA, file=0xB5DA, PASS[0m
+[0;32mI (5135) idfzk: 一: hardcoded=0xD2BB, file=0xD2BB, PASS[0m
+[0;32mI (5135) idfzk: 个: hardcoded=0xB8F6, file=0xB8F6, PASS[0m
+[0;32mI (5325) idfzk: 测: hardcoded=0xB2E2, file=0xB2E2, PASS[0m
+[0;31mE (5455) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (5455) task_wdt:  - IDLE0 (CPU 0)[0m
+[0;31mE (5455) task_wdt: Tasks currently running:[0m
+[0;31mE (5455) task_wdt: CPU 0: main[0m
+[0;31mE (5455) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (5455) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x42015683:0x3FC9D230 0x42015AA0:0x3FC9D250 0x40377641:0x3FC9D280 0x400559DD:0x3FCA72D0 0x4037E143:0x3FCA72E0 0x4037683B:0x3FCA7300 0x40377EBF:0x3FCA7320 0x40378B7F:0x3FCA7340 0x40378B8A:0x3FCA7360 0x4037B415:0x3FCA7380 0x4037863F:0x3FCA73A0 0x420145F2:0x3FCA73E0 0x4200DC2F:0x3FCA7410 0x42011723:0x3FCA7440 0x4200F405:0x3FCA7470 0x4200F83B:0x3FCA74C0 0x4200E6E8:0x3FCA7510 0x4200DA51:0x3FCA7540 0x42009ACF:0x3FCA7560 0x42084E6D:0x3FCA7580 0x420852AD:0x3FCA75A0 0x420846F6:0x3FCA7630 0x4200ADA1:0x3FCA7650 0x4200AE22:0x3FCA7680 0x4200B6A8:0x3FCA77D0 0x4209F27F:0x3FCA7870 0x4037DD9D:0x3FCA78A0
+
+[0;32mI (5595) idfzk: 试: hardcoded=0xCAF5, file=0xCAD4, FAIL[0m
+[0;32mI (5785) idfzk: 我: hardcoded=0xCED2, file=0xCED2, PASS[0m
+[0;32mI (5975) idfzk: 爱: hardcoded=0xB0AE, file=0xB0AE, PASS[0m
+[0;32mI (6175) idfzk: 李: hardcoded=0xC0EE, file=0xC0EE, PASS[0m
+[0;32mI (6365) idfzk: 美: hardcoded=0xC3C0, file=0xC3C0, PASS[0m
+[0;32mI (6555) idfzk: 春: hardcoded=0xB4BA, file=0xB4BA, PASS[0m
+[0;32mI (6745) idfzk: 西: hardcoded=0xCEF7, file=0xCEF7, PASS[0m
+[0;32mI (6945) idfzk: 班: hardcoded=0xB0E0, file=0xB0E0, PASS[0m
+[0;32mI (7135) idfzk: 牙: hardcoded=0xD1C0, file=0xD1C0, PASS[0m
+[0;32mI (7325) idfzk: 王: hardcoded=0xCDF5, file=0xCDF5, PASS[0m
+[0;32mI (7515) idfzk: 国: hardcoded=0xB9FA, file=0xB9FA, PASS[0m
+[0;32mI (7515) idfzk: 
+Test Summary: 34/35 passed[0m
+[0;31mE (7515) idfzk: Some tests failed. Please check the uni2gbk.bin file or conversion logic.[0m
+[0;32mI (7525) idfzk: Initializing SSD1306...[0m
+[0;32mI (7535) gpio: GPIO[1]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (7545) gpio: GPIO[6]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (7555) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (7665) SSD1306: SPI HOST_ID=1[0m
+[0;32mI (7665) SSD1306: spi_bus_initialize=0[0m
+[0;32mI (7665) SSD1306: spi_bus_add_device=0[0m
+[0;32mI (7695) idfzk: SSD1306 initialized successfully[0m
+[0;32mI (7735) idfzk: ========== WiFi Initialization ==========[0m
+[0;32mI (7735) idfzk: Initializing WiFi...[0m
+[0;32mI (7745) pp: pp rom version: e7ae62f[0m
+[0;32mI (7755) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (7765) wifi:wifi driver task: 3fcaf1f4, prio:23, stack:6656, core=0[0m
+[0;32mI (7775) wifi:wifi firmware version: 0caa81945[0m
+[0;32mI (7775) wifi:wifi certification version: v7.0[0m
+[0;32mI (7775) wifi:config NVS flash: enabled[0m
+[0;32mI (7775) wifi:config nano formating: disabled[0m
+[0;32mI (7775) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (7785) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (7785) wifi:Init management short buffer num: 32[0m
+[0;32mI (7785) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (7795) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (7795) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (7805) wifi:Init static rx buffer num: 10[0m
+[0;32mI (7805) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (7815) wifi_init: rx ba win: 6[0m
+[0;32mI (7815) wifi_init: accept mbox: 6[0m
+[0;32mI (7815) wifi_init: tcpip mbox: 32[0m
+[0;32mI (7825) wifi_init: udp mbox: 6[0m
+[0;32mI (7825) wifi_init: tcp mbox: 6[0m
+[0;32mI (7825) wifi_init: tcp tx win: 5760[0m
+[0;32mI (7835) wifi_init: tcp rx win: 5760[0m
+[0;32mI (7835) wifi_init: tcp mss: 1440[0m
+[0;32mI (7845) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (7845) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (7855) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;32mI (7895) wifi:mode : sta (24:58:7c:da:36:64)[0m
+[0;32mI (7895) wifi:enable tsf[0m
+[0;32mI (7895) idfzk: WiFi initialized successfully[0m
+[0;32mI (7895) idfzk: WiFi station started[0m
+[0;32mI (8115) idfzk: gt(c1=0xCE, c2=0xB4) = 3877, offset=0x0001E4A0, base=0x00114FDE, total=0x0013347E[0m
+[0;32mI (8115) idfzk: Reading character at address: 0x0013347E, size: 32 bytes[0m
+[0;32mI (8245) idfzk: Original vs Converted data:[0m
+01 00 01 00 01 00 3F F8  -> 80 80 88 88 88 88 88 FF 
+01 00 01 00 01 00 FF FE  -> 88 88 88 88 88 80 80 00 
+03 80 05 40 09 20 11 10  -> 20 20 10 08 04 02 01 FF 
+21 08 C1 06 01 00 01 00  -> 01 02 04 08 10 20 20 00 
+[0;32mI (8255) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (8265) idfzk: Converted character data (first 16 bytes):[0m
+80 80 88 88 88 88 88 FF 
+88 88 88 88 88 80 80 00 
+[0;32mI (8275) idfzk: Character data (first 16 bytes):[0m
+80 80 88 88 88 88 88 FF 
+88 88 88 88 88 80 80 00 
+... (total 32 bytes)
+[0;32mI (8365) idfzk: gt(c1=0xC1, c2=0xAC) = 2647, offset=0x00014AE0, base=0x00114FDE, total=0x00129ABE[0m
+[0;32mI (8365) idfzk: Reading character at address: 0x00129ABE, size: 32 bytes[0m
+[0;32mI (8495) idfzk: Original vs Converted data:[0m
+00 40 20 40 17 FE 10 80  -> 40 40 42 CC 00 04 44 64 
+00 A0 01 20 F3 FC 10 20  -> 5C 47 F4 44 44 44 04 00 
+10 20 10 20 17 FE 10 20  -> 00 40 20 1F 20 44 44 44 
+10 20 28 20 47 FE 00 00  -> 44 44 7F 44 44 44 44 00 
+[0;32mI (8505) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (8525) idfzk: Converted character data (first 16 bytes):[0m
+40 40 42 CC 00 04 44 64 
+5C 47 F4 44 44 44 04 00 
+[0;32mI (8535) idfzk: Character data (first 16 bytes):[0m
+40 40 42 CC 00 04 44 64 
+5C 47 F4 44 44 44 04 00 
+... (total 32 bytes)
+[0;32mI (8625) idfzk: gt(c1=0xBD, c2=0xD3) = 2310, offset=0x000120C0, base=0x00114FDE, total=0x0012709E[0m
+[0;32mI (8625) idfzk: Reading character at address: 0x0012709E, size: 32 bytes[0m
+[0;32mI (8745) idfzk: Original vs Converted data:[0m
+10 80 10 40 13 FC 10 00  -> 10 10 10 FF 10 50 44 54 
+FD 08 10 90 17 FE 10 40  -> 65 C6 44 64 54 44 40 00 
+18 40 37 FE D0 88 11 08  -> 04 44 82 7F 01 82 82 4A 
+10 90 10 60 51 98 26 04  -> 56 23 22 52 4E 82 02 00 
+[0;32mI (8755) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (8775) idfzk: Converted character data (first 16 bytes):[0m
+10 10 10 FF 10 50 44 54 
+65 C6 44 64 54 44 40 00 
+[0;32mI (8785) idfzk: Character data (first 16 bytes):[0m
+10 10 10 FF 10 50 44 54 
+65 C6 44 64 54 44 40 00 
+... (total 32 bytes)
+[0;32mI (8875) idfzk: gt(c1=0xC7, c2=0xEB) = 3274, offset=0x00019940, base=0x00114FDE, total=0x0012E91E[0m
+[0;32mI (8875) idfzk: Reading character at address: 0x0012E91E, size: 32 bytes[0m
+[0;32mI (8995) idfzk: Original vs Converted data:[0m
+00 40 40 40 27 FC 20 40  -> 40 42 CC 00 00 44 54 54 
+03 F8 00 40 E7 FE 20 00  -> 54 7F 54 54 54 44 40 00 
+23 F8 22 08 23 F8 22 08  -> 00 00 7F 20 10 00 FF 15 
+2B F8 32 08 22 28 02 10  -> 15 15 55 95 7F 00 00 00 
+[0;32mI (9015) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (9025) idfzk: Converted character data (first 16 bytes):[0m
+40 42 CC 00 00 44 54 54 
+54 7F 54 54 54 44 40 00 
+[0;32mI (9035) idfzk: Character data (first 16 bytes):[0m
+40 42 CC 00 00 44 54 54 
+54 7F 54 54 54 44 40 00 
+... (total 32 bytes)
+[0;32mI (9125) idfzk: gt(c1=0xCA, c2=0xB9) = 3506, offset=0x0001B640, base=0x00114FDE, total=0x0013061E[0m
+[0;32mI (9125) idfzk: Reading character at address: 0x0013061E, size: 32 bytes[0m
+[0;32mI (9255) idfzk: Original vs Converted data:[0m
+10 40 10 40 1F FE 20 40  -> 80 60 F8 07 04 E4 24 24 
+20 40 67 FC 64 44 A4 44  -> 24 FF 24 24 24 E4 04 00 
+27 FC 20 40 22 40 21 40  -> 00 00 FF 00 80 81 45 29 
+20 80 21 40 22 30 2C 0E  -> 11 2F 41 41 81 81 80 00 
+[0;32mI (9265) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (9275) idfzk: Converted character data (first 16 bytes):[0m
+80 60 F8 07 04 E4 24 24 
+24 FF 24 24 24 E4 04 00 
+[0;32mI (9285) idfzk: Character data (first 16 bytes):[0m
+80 60 F8 07 04 E4 24 24 
+24 FF 24 24 24 E4 04 00 
+... (total 32 bytes)
+[0;32mI (9375) idfzk: gt(c1=0xD3, c2=0xC3) = 4362, offset=0x00022140, base=0x00114FDE, total=0x0013711E[0m
+[0;32mI (9375) idfzk: Reading character at address: 0x0013711E, size: 32 bytes[0m
+[0;32mI (9505) idfzk: Original vs Converted data:[0m
+00 00 3F F8 21 08 21 08  -> 00 00 FE 22 22 22 22 FE 
+21 08 3F F8 21 08 21 08  -> 22 22 22 22 FE 00 00 00 
+21 08 3F F8 21 08 21 08  -> 80 60 1F 02 02 02 02 7F 
+21 08 41 08 41 28 80 10  -> 02 02 42 82 7F 00 00 00 
+[0;32mI (9515) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (9535) idfzk: Converted character data (first 16 bytes):[0m
+00 00 FE 22 22 22 22 FE 
+22 22 22 22 FE 00 00 00 
+[0;32mI (9545) idfzk: Character data (first 16 bytes):[0m
+00 00 FE 22 22 22 22 FE 
+22 22 22 22 FE 00 00 00 
+... (total 32 bytes)
+[0;33mW (9785) idfzk: WiFi config file not found[0m
+[0;32mI (9785) idfzk: No WiFi config found, starting SmartConfig...[0m
+[0;32mI (9785) idfzk: Starting SmartConfig...[0m
+[0;32mI (9835) smartconfig: SC version: V3.0.1[0m
+[0;32mI (10835) idfzk: SmartConfig waiting... 1/60[0m
+[0;32mI (11835) idfzk: SmartConfig waiting... 2/60[0m
+[0;32mI (12835) idfzk: SmartConfig waiting... 3/60[0m
+[0;32mI (13835) idfzk: SmartConfig waiting... 4/60[0m
+[0;32mI (14655) wifi:ic_enable_sniffer[0m
+[0;32mI (14655) smartconfig: Start to find channel...[0m
+[0;32mI (14655) idfzk: SmartConfig scan done[0m
+[0;32mI (14835) idfzk: SmartConfig waiting... 5/60[0m
+[0;32mI (15835) idfzk: SmartConfig waiting... 6/60[0m
+[0;32mI (16835) idfzk: SmartConfig waiting... 7/60[0m
+[0;32mI (17835) idfzk: SmartConfig waiting... 8/60[0m
+[0;32mI (18835) idfzk: SmartConfig waiting... 9/60[0m
+[0;32mI (19835) idfzk: SmartConfig waiting... 10/60[0m
+[0;32mI (20835) idfzk: SmartConfig waiting... 11/60[0m
+[0;32mI (21835) idfzk: SmartConfig waiting... 12/60[0m
+[0;32mI (22835) idfzk: SmartConfig waiting... 13/60[0m
+[0;32mI (23835) idfzk: SmartConfig waiting... 14/60[0m
+[0;32mI (24835) idfzk: SmartConfig waiting... 15/60[0m
+[0;32mI (25835) idfzk: SmartConfig waiting... 16/60[0m
+[0;32mI (26835) idfzk: SmartConfig waiting... 17/60[0m
+[0;32mI (27835) idfzk: SmartConfig waiting... 18/60[0m
+[0;32mI (28835) idfzk: SmartConfig waiting... 19/60[0m
+[0;32mI (29835) idfzk: SmartConfig waiting... 20/60[0m
+[0;32mI (30835) idfzk: SmartConfig waiting... 21/60[0m
+[0;32mI (31835) idfzk: SmartConfig waiting... 22/60[0m
+[0;32mI (32835) idfzk: SmartConfig waiting... 23/60[0m
+[0;32mI (33835) idfzk: SmartConfig waiting... 24/60[0m
+[0;32mI (34835) idfzk: SmartConfig waiting... 25/60[0m
+[0;32mI (35835) idfzk: SmartConfig waiting... 26/60[0m
+[0;32mI (36835) idfzk: SmartConfig waiting... 27/60[0m
+[0;32mI (37835) idfzk: SmartConfig waiting... 28/60[0m
+[0;32mI (38835) idfzk: SmartConfig waiting... 29/60[0m
+[0;32mI (39835) idfzk: SmartConfig waiting... 30/60[0m
+[0;32mI (40835) idfzk: SmartConfig waiting... 31/60[0m
+[0;32mI (41835) idfzk: SmartConfig waiting... 32/60[0m
+[0;32mI (42835) idfzk: SmartConfig waiting... 33/60[0m
+[0;32mI (43835) idfzk: SmartConfig waiting... 34/60[0m
+[0;32mI (44835) idfzk: SmartConfig waiting... 35/60[0m
+[0;32mI (45835) idfzk: SmartConfig waiting... 36/60[0m
+[0;32mI (46835) idfzk: SmartConfig waiting... 37/60[0m
+[0;32mI (47835) idfzk: SmartConfig waiting... 38/60[0m
+[0;32mI (48835) idfzk: SmartConfig waiting... 39/60[0m
+[0;32mI (49835) idfzk: SmartConfig waiting... 40/60[0m
+[0;32mI (50835) idfzk: SmartConfig waiting... 41/60[0m
+[0;32mI (51835) idfzk: SmartConfig waiting... 42/60[0m
+[0;32mI (52835) idfzk: SmartConfig waiting... 43/60[0m
+[0;32mI (53835) idfzk: SmartConfig waiting... 44/60[0m
+[0;32mI (54835) idfzk: SmartConfig waiting... 45/60[0m
+[0;32mI (55835) idfzk: SmartConfig waiting... 46/60[0m
+[0;32mI (56835) idfzk: SmartConfig waiting... 47/60[0m
+[0;32mI (57835) idfzk: SmartConfig waiting... 48/60[0m
+[0;32mI (58835) idfzk: SmartConfig waiting... 49/60[0m
+[0;32mI (59835) idfzk: SmartConfig waiting... 50/60[0m
+[0;32mI (60835) idfzk: SmartConfig waiting... 51/60[0m
+[0;32mI (61835) idfzk: SmartConfig waiting... 52/60[0m
+[0;32mI (62835) idfzk: SmartConfig waiting... 53/60[0m
+[0;32mI (63835) idfzk: SmartConfig waiting... 54/60[0m
+[0;32mI (64835) idfzk: SmartConfig waiting... 55/60[0m
+[0;32mI (65835) idfzk: SmartConfig waiting... 56/60[0m
+[0;32mI (66835) idfzk: SmartConfig waiting... 57/60[0m
+[0;32mI (67835) idfzk: SmartConfig waiting... 58/60[0m
+[0;32mI (68835) idfzk: SmartConfig waiting... 59/60[0m
+[0;32mI (69835) idfzk: SmartConfig waiting... 60/60[0m
+[0;33mW (69835) idfzk: SmartConfig timeout[0m
+[0;32mI (69835) wifi:ic_disable_sniffer[0m
+[0;32mI (69935) idfzk: gt(c1=0xCE, c2=0xB4) = 3877, offset=0x0001E4A0, base=0x00114FDE, total=0x0013347E[0m
+[0;32mI (69935) idfzk: Reading character at address: 0x0013347E, size: 32 bytes[0m
+[0;32mI (70055) idfzk: Original vs Converted data:[0m
+01 00 01 00 01 00 3F F8  -> 80 80 88 88 88 88 88 FF 
+01 00 01 00 01 00 FF FE  -> 88 88 88 88 88 80 80 00 
+03 80 05 40 09 20 11 10  -> 20 20 10 08 04 02 01 FF 
+21 08 C1 06 01 00 01 00  -> 01 02 04 08 10 20 20 00 
+[0;32mI (70075) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (70085) idfzk: Converted character data (first 16 bytes):[0m
+80 80 88 88 88 88 88 FF 
+88 88 88 88 88 80 80 00 
+[0;32mI (70095) idfzk: Character data (first 16 bytes):[0m
+80 80 88 88 88 88 88 FF 
+88 88 88 88 88 80 80 00 
+... (total 32 bytes)
+[0;32mI (70185) idfzk: gt(c1=0xC1, c2=0xAC) = 2647, offset=0x00014AE0, base=0x00114FDE, total=0x00129ABE[0m
+[0;32mI (70185) idfzk: Reading character at address: 0x00129ABE, size: 32 bytes[0m
+[0;32mI (70315) idfzk: Original vs Converted data:[0m
+00 40 20 40 17 FE 10 80  -> 40 40 42 CC 00 04 44 64 
+00 A0 01 20 F3 FC 10 20  -> 5C 47 F4 44 44 44 04 00 
+10 20 10 20 17 FE 10 20  -> 00 40 20 1F 20 44 44 44 
+10 20 28 20 47 FE 00 00  -> 44 44 7F 44 44 44 44 00 
+[0;32mI (70325) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (70335) idfzk: Converted character data (first 16 bytes):[0m
+40 40 42 CC 00 04 44 64 
+5C 47 F4 44 44 44 04 00 
+[0;32mI (70345) idfzk: Character data (first 16 bytes):[0m
+40 40 42 CC 00 04 44 64 
+5C 47 F4 44 44 44 04 00 
+... (total 32 bytes)
+[0;32mI (70435) idfzk: gt(c1=0xBD, c2=0xD3) = 2310, offset=0x000120C0, base=0x00114FDE, total=0x0012709E[0m
+[0;32mI (70435) idfzk: Reading character at address: 0x0012709E, size: 32 bytes[0m
+[0;32mI (70565) idfzk: Original vs Converted data:[0m
+10 80 10 40 13 FC 10 00  -> 10 10 10 FF 10 50 44 54 
+FD 08 10 90 17 FE 10 40  -> 65 C6 44 64 54 44 40 00 
+18 40 37 FE D0 88 11 08  -> 04 44 82 7F 01 82 82 4A 
+10 90 10 60 51 98 26 04  -> 56 23 22 52 4E 82 02 00 
+[0;32mI (70575) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (70585) idfzk: Converted character data (first 16 bytes):[0m
+10 10 10 FF 10 50 44 54 
+65 C6 44 64 54 44 40 00 
+[0;32mI (70605) idfzk: Character data (first 16 bytes):[0m
+10 10 10 FF 10 50 44 54 
+65 C6 44 64 54 44 40 00 
+... (total 32 bytes)
+[0;32mI (70695) idfzk: gt(c1=0xC7, c2=0xEB) = 3274, offset=0x00019940, base=0x00114FDE, total=0x0012E91E[0m
+[0;32mI (70695) idfzk: Reading character at address: 0x0012E91E, size: 32 bytes[0m
+[0;32mI (70815) idfzk: Original vs Converted data:[0m
+00 40 40 40 27 FC 20 40  -> 40 42 CC 00 00 44 54 54 
+03 F8 00 40 E7 FE 20 00  -> 54 7F 54 54 54 44 40 00 
+23 F8 22 08 23 F8 22 08  -> 00 00 7F 20 10 00 FF 15 
+2B F8 32 08 22 28 02 10  -> 15 15 55 95 7F 00 00 00 
+[0;32mI (70825) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (70845) idfzk: Converted character data (first 16 bytes):[0m
+40 42 CC 00 00 44 54 54 
+54 7F 54 54 54 44 40 00 
+[0;32mI (70855) idfzk: Character data (first 16 bytes):[0m
+40 42 CC 00 00 44 54 54 
+54 7F 54 54 54 44 40 00 
+... (total 32 bytes)
+[0;32mI (70945) idfzk: gt(c1=0xCA, c2=0xB9) = 3506, offset=0x0001B640, base=0x00114FDE, total=0x0013061E[0m
+[0;32mI (70945) idfzk: Reading character at address: 0x0013061E, size: 32 bytes[0m
+[0;32mI (71065) idfzk: Original vs Converted data:[0m
+10 40 10 40 1F FE 20 40  -> 80 60 F8 07 04 E4 24 24 
+20 40 67 FC 64 44 A4 44  -> 24 FF 24 24 24 E4 04 00 
+27 FC 20 40 22 40 21 40  -> 00 00 FF 00 80 81 45 29 
+20 80 21 40 22 30 2C 0E  -> 11 2F 41 41 81 81 80 00 
+[0;32mI (71085) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (71095) idfzk: Converted character data (first 16 bytes):[0m
+80 60 F8 07 04 E4 24 24 
+24 FF 24 24 24 E4 04 00 
+[0;32mI (71105) idfzk: Character data (first 16 bytes):[0m
+80 60 F8 07 04 E4 24 24 
+24 FF 24 24 24 E4 04 00 
+... (total 32 bytes)
+[0;32mI (71195) idfzk: gt(c1=0xD3, c2=0xC3) = 4362, offset=0x00022140, base=0x00114FDE, total=0x0013711E[0m
+[0;32mI (71195) idfzk: Reading character at address: 0x0013711E, size: 32 bytes[0m
+[0;32mI (71325) idfzk: Original vs Converted data:[0m
+00 00 3F F8 21 08 21 08  -> 00 00 FE 22 22 22 22 FE 
+21 08 3F F8 21 08 21 08  -> 22 22 22 22 FE 00 00 00 
+21 08 3F F8 21 08 21 08  -> 80 60 1F 02 02 02 02 7F 
+21 08 41 08 41 28 80 10  -> 02 02 42 82 7F 00 00 00 
+[0;32mI (71335) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (71345) idfzk: Converted character data (first 16 bytes):[0m
+00 00 FE 22 22 22 22 FE 
+22 22 22 22 FE 00 00 00 
+[0;32mI (71365) idfzk: Character data (first 16 bytes):[0m
+00 00 FE 22 22 22 22 FE 
+22 22 22 22 FE 00 00 00 
+... (total 32 bytes)
+[0;32mI (73385) idfzk: ========== Testing font library ==========[0m
+[0;32mI (73385) idfzk: Test 1: Displaying '胖达科技' with 16x16 font[0m
+[0;32mI (73455) idfzk: gt(c1=0xC5, c2=0xD6) = 3065, offset=0x00017F20, base=0x00114FDE, total=0x0012CEFE[0m
+[0;32mI (73455) idfzk: Reading character at address: 0x0012CEFE, size: 32 bytes[0m
+[0;32mI (73585) idfzk: Original vs Converted data:[0m
+00 20 3C 20 25 24 24 A4  -> 00 00 FE 22 22 FE 00 44 
+24 A8 3C 20 25 FC 24 20  -> 58 40 FF 40 50 4C 00 00 
+24 20 3C 20 27 FE 24 20  -> 80 60 1F 42 82 7F 04 04 
+24 20 44 20 54 20 88 20  -> 04 04 FF 04 04 04 04 00 
+[0;32mI (73595) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (73615) idfzk: Converted character data (first 16 bytes):[0m
+00 00 FE 22 22 FE 00 44 
+58 40 FF 40 50 4C 00 00 
+[0;32mI (73625) idfzk: Character data (first 16 bytes):[0m
+00 00 FE 22 22 FE 00 44 
+58 40 FF 40 50 4C 00 00 
+... (total 32 bytes)
+[0;32mI (73715) idfzk: gt(c1=0xB4, c2=0xEF) = 1492, offset=0x0000BA80, base=0x00114FDE, total=0x00120A5E[0m
+[0;32mI (73715) idfzk: Reading character at address: 0x00120A5E, size: 32 bytes[0m
+[0;32mI (73835) idfzk: Original vs Converted data:[0m
+00 40 20 40 10 40 10 40  -> 40 40 42 CC 00 10 10 10 
+07 FE 00 40 F0 40 10 A0  -> 90 7F 90 10 10 10 10 00 
+10 90 11 08 12 04 14 04  -> 00 40 20 1F 20 48 44 42 
+10 00 28 00 47 FE 00 00  -> 41 40 40 41 42 4C 40 00 
+[0;32mI (73845) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (73865) idfzk: Converted character data (first 16 bytes):[0m
+40 40 42 CC 00 10 10 10 
+90 7F 90 10 10 10 10 00 
+[0;32mI (73875) idfzk: Character data (first 16 bytes):[0m
+40 40 42 CC 00 10 10 10 
+90 7F 90 10 10 10 10 00 
+... (total 32 bytes)
+[0;32mI (73965) idfzk: gt(c1=0xBF, c2=0xC6) = 2485, offset=0x000136A0, base=0x00114FDE, total=0x0012867E[0m
+[0;32mI (73965) idfzk: Reading character at address: 0x0012867E, size: 32 bytes[0m
+[0;32mI (74085) idfzk: Original vs Converted data:[0m
+08 10 1D 10 F0 90 10 90  -> 24 24 A4 FE A3 22 00 22 
+10 10 FD 10 10 90 38 90  -> CC 00 00 FF 00 00 00 00 
+34 10 50 1E 53 F0 90 10  -> 08 06 01 FF 00 01 04 04 
+10 10 10 10 10 10 10 10  -> 04 04 04 FF 02 02 02 00 
+[0;32mI (74105) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (74115) idfzk: Converted character data (first 16 bytes):[0m
+24 24 A4 FE A3 22 00 22 
+CC 00 00 FF 00 00 00 00 
+[0;32mI (74125) idfzk: Character data (first 16 bytes):[0m
+24 24 A4 FE A3 22 00 22 
+CC 00 00 FF 00 00 00 00 
+... (total 32 bytes)
+[0;32mI (74215) idfzk: gt(c1=0xBC, c2=0xBC) = 2193, offset=0x00011220, base=0x00114FDE, total=0x001261FE[0m
+[0;32mI (74215) idfzk: Reading character at address: 0x001261FE, size: 32 bytes[0m
+[0;32mI (74345) idfzk: Original vs Converted data:[0m
+10 20 10 20 10 20 13 FE  -> 10 10 10 FF 10 90 08 88 
+FC 20 10 20 10 20 15 FC  -> 88 88 FF 88 88 88 08 00 
+18 84 30 88 D0 48 10 50  -> 04 44 82 7F 01 80 80 40 
+10 20 10 50 51 88 26 06  -> 43 2C 10 28 46 81 80 00 
+[0;32mI (74355) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (74365) idfzk: Converted character data (first 16 bytes):[0m
+10 10 10 FF 10 90 08 88 
+88 88 FF 88 88 88 08 00 
+[0;32mI (74375) idfzk: Character data (first 16 bytes):[0m
+10 10 10 FF 10 90 08 88 
+88 88 FF 88 88 88 08 00 
+... (total 32 bytes)
+[0;32mI (79395) idfzk: Test 2: Displaying '路明电脑' with 12x12 font[0m
+[0;32mI (79505) idfzk: gt(c1=0xC2, c2=0xB7) = 2752, offset=0x00010200, base=0x00093D0E, total=0x000A3F0E[0m
+[0;32mI (79505) idfzk: Reading character at address: 0x000A3F0E, size: 24 bytes[0m
+[0;32mI (79615) idfzk: Original vs Converted data (12x12):[0m
+02 0C F3 CC 94 4C 9A 8C  -> 9E 12 F2 9E 48 C4 AB 92 
+F1 0C 22 8C 2C 6C B7 CC  -> AA C6 40 00 0F 08 07 04 
+A4 4C A4 4C B7 CC C4 4C  -> 00 0F 04 04 04 0F 00 00 
+[0;32mI (79625) idfzk: Converted character data (12x12, first 16 bytes):[0m
+9E 12 F2 9E 48 C4 AB 92 
+AA C6 40 00 0F 08 07 04 
+[0;32mI (79635) idfzk: Character data (first 16 bytes):[0m
+9E 12 F2 9E 48 C4 AB 92 
+AA C6 40 00 0F 08 07 04 
+... (total 24 bytes)
+[0;32mI (79735) idfzk: gt(c1=0xC3, c2=0xF7) = 2910, offset=0x000110D0, base=0x00093D0E, total=0x000A4DDE[0m
+[0;32mI (79735) idfzk: Reading character at address: 0x000A4DDE, size: 24 bytes[0m
+[0;32mI (79845) idfzk: Original vs Converted data (12x12):[0m
+FB EC 8A 2C 8A 2C 8B EC  -> FF 11 11 11 FF 00 FF 49 
+FA 2C 8A 2C 8B EC 8A 2C  -> 49 49 FF 00 03 01 01 01 
+FA 2C 82 2C 04 2C 08 EC  -> 09 04 03 00 08 08 0F 00 
+[0;32mI (79855) idfzk: Converted character data (12x12, first 16 bytes):[0m
+FF 11 11 11 FF 00 FF 49 
+49 49 FF 00 03 01 01 01 
+[0;32mI (79865) idfzk: Character data (first 16 bytes):[0m
+FF 11 11 11 FF 00 FF 49 
+49 49 FF 00 03 01 01 01 
+... (total 24 bytes)
+[0;32mI (79975) idfzk: gt(c1=0xB5, c2=0xE7) = 1578, offset=0x000093F0, base=0x00093D0E, total=0x0009D0FE[0m
+[0;32mI (79975) idfzk: Reading character at address: 0x0009D0FE, size: 24 bytes[0m
+[0;32mI (80075) idfzk: Original vs Converted data (12x12):[0m
+08 0C 08 0C FF 8C 88 8C  -> FC 24 24 24 FF 24 24 24 
+88 8C FF 8C 88 8C 88 8C  -> FC 00 00 00 03 01 01 01 
+FF 8C 88 2C 08 2C 07 EC  -> 07 09 09 09 09 08 0E 00 
+[0;32mI (80085) idfzk: Converted character data (12x12, first 16 bytes):[0m
+FC 24 24 24 FF 24 24 24 
+FC 00 00 00 03 01 01 01 
+[0;32mI (80095) idfzk: Character data (first 16 bytes):[0m
+FC 24 24 24 FF 24 24 24 
+FC 00 00 00 03 01 01 01 
+... (total 24 bytes)
+[0;32mI (80205) idfzk: gt(c1=0xC4, c2=0xD4) = 2969, offset=0x00011658, base=0x00093D0E, total=0x000A5366[0m
+[0;32mI (80205) idfzk: Reading character at address: 0x000A5366, size: 24 bytes[0m
+[0;32mI (80315) idfzk: Original vs Converted data (12x12):[0m
+01 0C 70 8C 57 EC 50 0C  -> 00 FE 92 FE 00 E4 04 15 
+71 4C 54 AC 54 AC 74 AC  -> E6 14 E4 00 08 07 08 0F 
+55 6C 54 2C 57 EC B0 2C  -> 00 07 04 05 04 05 0F 00 
+[0;32mI (80325) idfzk: Converted character data (12x12, first 16 bytes):[0m
+00 FE 92 FE 00 E4 04 15 
+E6 14 E4 00 08 07 08 0F 
+[0;32mI (80335) idfzk: Character data (first 16 bytes):[0m
+00 FE 92 FE 00 E4 04 15 
+E6 14 E4 00 08 07 08 0F 
+... (total 24 bytes)
+[0;32mI (85345) idfzk: Test 3: Displaying '路明电脑' with 24x24 font[0m
+[0;32mI (85465) idfzk: gt(c1=0xC2, c2=0xB7) = 2752, offset=0x00030600, base=0x001F43DE, total=0x002249DE[0m
+[0;32mI (85465) idfzk: Reading character at address: 0x002249DE, size: 72 bytes[0m
+[0;32mI (85625) idfzk: Original vs Converted data (24x24):[0m
+00 02 00 10 C3 80 1F E3  -> 00 00 00 FE FC 04 04 04 
+00 18 C6 18 18 C7 FC 18  -> FE FE 04 80 E0 78 9F 16 
+CC 30 18 CC 30 18 DA 60  -> 12 90 F0 78 18 10 00 00 
+1F D3 60 13 21 C0 03 01  -> 00 00 F8 F3 11 01 FF FF 
+C0 23 03 60 3B 46 30 33  -> 21 B1 62 41 A0 B0 99 8F 
+EC 1C 33 30 0F 33 4F F4  -> 86 8F 99 B0 60 E0 40 40 
+33 0C 30 33 0C 30 33 EC  -> 10 30 1F 1F 08 08 0F 0F 
+30 3F 0C 30 F0 0C 30 40  -> 04 04 04 00 FF 7F 20 20 
+0F F0 00 0C 30 00 08 20  -> 20 20 FF 7F 00 00 00 00 
+[0;32mI (85655) idfzk: Converted character data (24x24, first 16 bytes):[0m
+00 00 00 FE FC 04 04 04 
+FE FE 04 80 E0 78 9F 16 
+[0;32mI (85665) idfzk: Character data (first 16 bytes):[0m
+00 00 00 FE FC 04 04 04 
+FE FE 04 80 E0 78 9F 16 
+... (total 72 bytes)
+[0;32mI (85735) idfzk: gt(c1=0xC3, c2=0xF7) = 2910, offset=0x00033270, base=0x001F43DE, total=0x0022764E[0m
+[0;32mI (85735) idfzk: Reading character at address: 0x0022764E, size: 72 bytes[0m
+[0;32mI (85885) idfzk: Original vs Converted data (24x24):[0m
+00 00 00 00 04 18 10 C7  -> 00 00 00 FC F8 08 08 08 
+FC 1F E6 18 18 C6 18 18  -> FC FC 08 00 00 FE FC 04 
+C6 18 18 C6 18 18 C6 18  -> 04 04 04 FE FE 04 00 00 
+18 C7 F8 18 C6 18 1F C6  -> 00 00 00 FF FF 04 04 04 
+18 18 C6 18 18 C6 18 18  -> FF FF 00 00 00 FF FF 41 
+C6 18 18 C7 F8 18 C6 18  -> 41 41 41 FF FF 00 00 00 
+18 CC 18 1F CC 18 18 D8  -> 00 00 00 1F 0F 02 02 82 
+18 18 98 18 10 30 18 00  -> 4F 27 30 1C 0F 03 00 00 
+60 F8 00 80 30 01 00 20  -> 20 20 E0 7F 3F 00 00 00 
+[0;32mI (85925) idfzk: Converted character data (24x24, first 16 bytes):[0m
+00 00 00 FC F8 08 08 08 
+FC FC 08 00 00 FE FC 04 
+[0;32mI (85935) idfzk: Character data (first 16 bytes):[0m
+00 00 00 FC F8 08 08 08 
+FC FC 08 00 00 FE FC 04 
+... (total 72 bytes)
+[0;32mI (86005) idfzk: gt(c1=0xB5, c2=0xE7) = 1578, offset=0x0001BBD0, base=0x001F43DE, total=0x0020FFAE[0m
+[0;32mI (86005) idfzk: Reading character at address: 0x0020FFAE, size: 72 bytes[0m
+[0;32mI (86155) idfzk: Original vs Converted data (24x24):[0m
+00 20 00 00 38 00 00 30  -> 00 00 00 F0 E0 20 20 20 
+00 00 30 00 10 30 60 1F  -> 20 20 FF FE 22 20 20 20 
+FF F0 18 30 60 18 30 60  -> 20 F0 F0 20 00 00 00 00 
+18 30 60 18 30 60 1F FF  -> 00 00 00 FF FF 84 84 84 
+E0 18 30 60 18 30 60 18  -> 84 84 FF FF 84 84 84 84 
+30 60 18 30 60 1F FF E0  -> 84 FF FF 00 00 00 00 00 
+18 30 40 10 30 04 00 30  -> 00 00 00 03 01 00 00 00 
+04 00 30 04 00 30 06 00  -> 00 00 3F 7F 60 60 60 60 
+3F FE 00 1F FC 00 00 00  -> 60 61 60 60 60 7E 30 00 
+[0;32mI (86185) idfzk: Converted character data (24x24, first 16 bytes):[0m
+00 00 00 F0 E0 20 20 20 
+20 20 FF FE 22 20 20 20 
+[0;32mI (86205) idfzk: Character data (first 16 bytes):[0m
+00 00 00 F0 E0 20 20 20 
+20 20 FF FE 22 20 20 20 
+... (total 72 bytes)
+[0;32mI (86265) idfzk: gt(c1=0xC4, c2=0xD4) = 2969, offset=0x00034308, base=0x001F43DE, total=0x002286E6[0m
+[0;32mI (86265) idfzk: Reading character at address: 0x002286E6, size: 72 bytes[0m
+[0;32mI (86425) idfzk: Original vs Converted data (24x24):[0m
+00 06 00 23 03 00 3F 81  -> 00 00 FE FC 04 04 FE FE 
+80 33 01 00 33 00 0C 33  -> 04 20 20 20 20 A1 23 2E 
+7F FE 33 00 00 33 04 40  -> 24 A0 20 20 30 30 20 00 
+3F 22 68 33 3A CE 33 32  -> 00 00 FF FF 21 21 FF FF 
+CC 33 31 8C 33 31 8C 3F  -> 00 00 FF FE 02 00 C7 78 
+31 8C 33 33 CC 33 32 CC  -> FE C7 01 00 FF FE 02 00 
+33 34 6C 33 34 6C 33 38  -> 40 30 1F 07 20 60 7F 3F 
+4C 23 30 0C 63 30 0C 4F  -> 00 20 7F 3F 24 23 20 20 
+7F FC 86 20 0C 00 00 00  -> 20 27 23 20 7F 7F 00 00 
+[0;32mI (86455) idfzk: Converted character data (24x24, first 16 bytes):[0m
+00 00 FE FC 04 04 FE FE 
+04 20 20 20 20 A1 23 2E 
+[0;32mI (86465) idfzk: Character data (first 16 bytes):[0m
+00 00 FE FC 04 04 FE FE 
+04 20 20 20 20 A1 23 2E 
+... (total 72 bytes)
+[0;32mI (91485) idfzk: Test 4: Displaying '江西省萍乡市' with 12x12 font[0m
+[0;32mI (91565) idfzk: gt(c1=0xBD, c2=0xAD) = 2272, offset=0x0000D500, base=0x00093D0E, total=0x000A120E[0m
+[0;32mI (91565) idfzk: Reading character at address: 0x000A120E, size: 24 bytes[0m
+[0;32mI (91675) idfzk: Original vs Converted data (12x12):[0m
+00 0C 9F CC 42 0C 02 0C  -> 22 44 00 02 02 02 FE 02 
+02 0C 82 0C 42 0C 02 0C  -> 02 02 00 00 04 02 09 08 
+22 0C 42 0C 82 0C 3F EC  -> 08 08 0F 08 08 08 08 00 
+[0;32mI (91685) idfzk: Converted character data (12x12, first 16 bytes):[0m
+22 44 00 02 02 02 FE 02 
+02 02 00 00 04 02 09 08 
+[0;32mI (91695) idfzk: Character data (first 16 bytes):[0m
+22 44 00 02 02 02 FE 02 
+02 02 00 00 04 02 09 08 
+... (total 24 bytes)
+[0;32mI (91795) idfzk: gt(c1=0xCE, c2=0xF7) = 3944, offset=0x000171C0, base=0x00093D0E, total=0x000AAECE[0m
+[0;32mI (91805) idfzk: Reading character at address: 0x000AAECE, size: 24 bytes[0m
+[0;32mI (91905) idfzk: Original vs Converted data (12x12):[0m
+FF EC 0A 0C 0A 0C 7F CC  -> 01 F9 09 89 7F 09 7F 89 
+4A 4C 4A 4C 4A 4C 51 CC  -> 89 F9 01 00 00 0F 05 04 
+60 4C 40 4C 7F CC 40 4C  -> 04 04 04 04 04 0F 00 00 
+[0;32mI (91915) idfzk: Converted character data (12x12, first 16 bytes):[0m
+01 F9 09 89 7F 09 7F 89 
+89 F9 01 00 00 0F 05 04 
+[0;32mI (91925) idfzk: Character data (first 16 bytes):[0m
+01 F9 09 89 7F 09 7F 89 
+89 F9 01 00 00 0F 05 04 
+... (total 24 bytes)
+[0;32mI (92035) idfzk: gt(c1=0xCA, c2=0xA1) = 3482, offset=0x00014670, base=0x00093D0E, total=0x000A837E[0m
+[0;32mI (92035) idfzk: Reading character at address: 0x000A837E, size: 24 bytes[0m
+[0;32mI (92145) idfzk: Original vs Converted data (12x12):[0m
+04 0C 24 8C 45 4C 86 2C  -> 28 24 E2 B0 B0 AF A8 A4 
+18 0C FF CC 20 4C 3F CC  -> A2 E4 08 00 00 00 0F 0A 
+20 4C 3F CC 20 4C 3F CC  -> 0A 0A 0A 0A 0A 0F 00 00 
+[0;32mI (92155) idfzk: Converted character data (12x12, first 16 bytes):[0m
+28 24 E2 B0 B0 AF A8 A4 
+A2 E4 08 00 00 00 0F 0A 
+[0;32mI (92165) idfzk: Character data (first 16 bytes):[0m
+28 24 E2 B0 B0 AF A8 A4 
+A2 E4 08 00 00 00 0F 0A 
+... (total 24 bytes)
+[0;32mI (92265) idfzk: gt(c1=0xC6, c2=0xBC) = 3133, offset=0x000125B8, base=0x00093D0E, total=0x000A62C6[0m
+[0;32mI (92265) idfzk: Reading character at address: 0x000A62C6, size: 24 bytes[0m
+[0;32mI (92375) idfzk: Original vs Converted data (12x12):[0m
+11 0C FF EC 11 0C 80 0C  -> 4A 92 02 57 92 12 F2 17 
+5F CC 02 0C 92 4C 4A 8C  -> 92 52 02 00 08 04 01 01 
+3F EC 02 0C 42 0C 82 0C  -> 01 01 0F 01 01 01 01 00 
+[0;32mI (92385) idfzk: Converted character data (12x12, first 16 bytes):[0m
+4A 92 02 57 92 12 F2 17 
+92 52 02 00 08 04 01 01 
+[0;32mI (92395) idfzk: Character data (first 16 bytes):[0m
+4A 92 02 57 92 12 F2 17 
+92 52 02 00 08 04 01 01 
+... (total 24 bytes)
+[0;32mI (92505) idfzk: gt(c1=0xCF, c2=0xE7) = 4022, offset=0x00017910, base=0x00093D0E, total=0x000AB61E[0m
+[0;32mI (92505) idfzk: Reading character at address: 0x000AB61E, size: 24 bytes[0m
+[0;32mI (92615) idfzk: Original vs Converted data (12x12):[0m
+08 0C 10 0C 20 8C 41 0C  -> 00 98 D4 D2 B1 B0 90 88 
+7E 0C 0C 2C 30 2C 7F CC  -> 84 80 60 00 08 08 08 08 
+00 8C 03 0C 0C 0C F0 0C  -> 04 04 02 02 01 00 00 00 
+[0;32mI (92615) idfzk: Converted character data (12x12, first 16 bytes):[0m
+00 98 D4 D2 B1 B0 90 88 
+84 80 60 00 08 08 08 08 
+[0;32mI (92635) idfzk: Character data (first 16 bytes):[0m
+00 98 D4 D2 B1 B0 90 88 
+84 80 60 00 08 08 08 08 
+... (total 24 bytes)
+[0;32mI (92735) idfzk: gt(c1=0xCA, c2=0xD0) = 3529, offset=0x00014AD8, base=0x00093D0E, total=0x000A87E6[0m
+[0;32mI (92735) idfzk: Reading character at address: 0x000A87E6, size: 24 bytes[0m
+[0;32mI (92845) idfzk: Original vs Converted data (12x12):[0m
+08 0C 04 0C FF EC 04 0C  -> 04 E4 24 24 25 FE 24 24 
+04 0C 7F CC 44 4C 44 4C  -> 24 E4 04 00 00 07 00 00 
+44 4C 44 4C 44 CC 04 0C  -> 00 0F 00 00 04 07 00 00 
+[0;32mI (92855) idfzk: Converted character data (12x12, first 16 bytes):[0m
+04 E4 24 24 25 FE 24 24 
+24 E4 04 00 00 07 00 00 
+[0;32mI (92865) idfzk: Character data (first 16 bytes):[0m
+04 E4 24 24 25 FE 24 24 
+24 E4 04 00 00 07 00 00 
+... (total 24 bytes)
+[0;32mI (97875) idfzk: Test 5: Displaying '江西省萍乡市' with 16x16 font[0m
+[0;32mI (97995) idfzk: gt(c1=0xBD, c2=0xAD) = 2272, offset=0x00011C00, base=0x00114FDE, total=0x00126BDE[0m
+[0;32mI (97995) idfzk: Reading character at address: 0x00126BDE, size: 32 bytes[0m
+[0;32mI (98115) idfzk: Original vs Converted data:[0m
+00 00 20 00 17 FC 10 40  -> 10 60 02 0C C0 04 04 04 
+80 40 40 40 48 40 08 40  -> 04 FC 04 04 04 04 00 00 
+10 40 10 40 E0 40 20 40  -> 04 04 7C 03 20 20 20 20 
+20 40 2F FE 20 00 00 00  -> 20 3F 20 20 20 20 20 00 
+[0;32mI (98135) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (98145) idfzk: Converted character data (first 16 bytes):[0m
+10 60 02 0C C0 04 04 04 
+04 FC 04 04 04 04 00 00 
+[0;32mI (98155) idfzk: Character data (first 16 bytes):[0m
+10 60 02 0C C0 04 04 04 
+04 FC 04 04 04 04 00 00 
+... (total 32 bytes)
+[0;32mI (98245) idfzk: gt(c1=0xCE, c2=0xF7) = 3944, offset=0x0001ED00, base=0x00114FDE, total=0x00133CDE[0m
+[0;32mI (98245) idfzk: Reading character at address: 0x00133CDE, size: 32 bytes[0m
+[0;32mI (98375) idfzk: Original vs Converted data:[0m
+00 00 FF FE 04 40 04 40  -> 02 02 E2 22 22 FE 22 22 
+04 40 3F F8 24 48 24 48  -> 22 FE 22 22 E2 02 02 00 
+24 48 24 48 28 38 30 08  -> 00 00 FF 48 44 43 40 40 
+20 08 20 08 3F F8 20 08  -> 40 43 44 44 FF 00 00 00 
+[0;32mI (98385) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (98405) idfzk: Converted character data (first 16 bytes):[0m
+02 02 E2 22 22 FE 22 22 
+22 FE 22 22 E2 02 02 00 
+[0;32mI (98415) idfzk: Character data (first 16 bytes):[0m
+02 02 E2 22 22 FE 22 22 
+22 FE 22 22 E2 02 02 00 
+... (total 32 bytes)
+[0;32mI (98505) idfzk: gt(c1=0xCA, c2=0xA1) = 3482, offset=0x0001B340, base=0x00114FDE, total=0x0013031E[0m
+[0;32mI (98505) idfzk: Reading character at address: 0x0013031E, size: 32 bytes[0m
+[0;32mI (98625) idfzk: Original vs Converted data:[0m
+01 00 11 10 11 08 21 24  -> 00 10 88 86 C0 C0 A0 AF 
+40 C0 03 00 0C 00 3F F8  -> 90 90 88 82 84 08 00 00 
+D0 08 1F F8 10 08 1F F8  -> 01 01 00 FF 4A 4A 4A 4A 
+10 08 10 08 1F F8 10 08  -> 4A 4A 4A 4A FF 00 00 00 
+[0;32mI (98635) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (98655) idfzk: Converted character data (first 16 bytes):[0m
+00 10 88 86 C0 C0 A0 AF 
+90 90 88 82 84 08 00 00 
+[0;32mI (98665) idfzk: Character data (first 16 bytes):[0m
+00 10 88 86 C0 C0 A0 AF 
+90 90 88 82 84 08 00 00 
+... (total 32 bytes)
+[0;32mI (98755) idfzk: gt(c1=0xC6, c2=0xBC) = 3133, offset=0x000187A0, base=0x00114FDE, total=0x0012D77E[0m
+[0;32mI (98755) idfzk: Reading character at address: 0x0012D77E, size: 32 bytes[0m
+[0;32mI (98875) idfzk: Original vs Converted data:[0m
+08 20 08 20 FF FE 08 20  -> 44 84 14 64 0F 24 A4 24 
+20 00 17 FC 90 40 42 48  -> 24 E4 2F 24 A4 24 04 00 
+49 50 08 40 17 FE E0 40  -> 08 09 78 04 03 04 04 05 
+20 40 20 40 20 40 00 40  -> 04 FF 04 05 04 04 04 00 
+[0;32mI (98895) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (98905) idfzk: Converted character data (first 16 bytes):[0m
+44 84 14 64 0F 24 A4 24 
+24 E4 2F 24 A4 24 04 00 
+[0;32mI (98915) idfzk: Character data (first 16 bytes):[0m
+44 84 14 64 0F 24 A4 24 
+24 E4 2F 24 A4 24 04 00 
+... (total 32 bytes)
+[0;32mI (99005) idfzk: gt(c1=0xCF, c2=0xE7) = 4022, offset=0x0001F6C0, base=0x00114FDE, total=0x0013469E[0m
+[0;32mI (99005) idfzk: Reading character at address: 0x0013469E, size: 32 bytes[0m
+[0;32mI (99135) idfzk: Original vs Converted data:[0m
+02 00 02 00 04 20 08 20  -> 00 00 20 30 28 24 A3 60 
+10 40 3F 80 01 08 02 08  -> 20 10 0C 00 C0 00 00 00 
+04 10 1F E0 00 40 00 80  -> 80 80 80 42 42 23 22 12 
+01 00 06 00 18 00 E0 00  -> 0A 06 02 01 00 00 00 00 
+[0;32mI (99145) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (99155) idfzk: Converted character data (first 16 bytes):[0m
+00 00 20 30 28 24 A3 60 
+20 10 0C 00 C0 00 00 00 
+[0;32mI (99165) idfzk: Character data (first 16 bytes):[0m
+00 00 20 30 28 24 A3 60 
+20 10 0C 00 C0 00 00 00 
+... (total 32 bytes)
+[0;32mI (99255) idfzk: gt(c1=0xCA, c2=0xD0) = 3529, offset=0x0001B920, base=0x00114FDE, total=0x001308FE[0m
+[0;32mI (99255) idfzk: Reading character at address: 0x001308FE, size: 32 bytes[0m
+[0;32mI (99385) idfzk: Original vs Converted data:[0m
+02 00 01 00 00 00 7F FC  -> 00 08 88 88 88 88 89 FA 
+01 00 01 00 01 00 3F F8  -> 88 88 88 88 88 08 00 00 
+21 08 21 08 21 08 21 08  -> 00 00 3F 00 00 00 00 FF 
+21 28 21 10 01 00 01 00  -> 00 00 10 20 1F 00 00 00 
+[0;32mI (99395) idfzk: Hardcoded font_pang data:[0m
+00 FE 22 22 FE 44 48 50 
+40 FF 40 50 48 44 00 00 
+80 7F 02 82 FF 04 04 04 
+04 FF 04 04 04 06 04 00 
+[0;32mI (99415) idfzk: Converted character data (first 16 bytes):[0m
+00 08 88 88 88 88 89 FA 
+88 88 88 88 88 08 00 00 
+[0;32mI (99425) idfzk: Character data (first 16 bytes):[0m
+00 08 88 88 88 88 89 FA 
+88 88 88 88 88 08 00 00 
+... (total 32 bytes)
+[0;32mI (104435) idfzk: Test 6: Displaying '江西省萍乡市' with 24x24 font[0m
+[0;32mI (104545) idfzk: gt(c1=0xBD, c2=0xAD) = 2272, offset=0x00027F00, base=0x001F43DE, total=0x0021C2DE[0m
+[0;32mI (104545) idfzk: Reading character at address: 0x0021C2DE, size: 72 bytes[0m
+[0;32mI (104695) idfzk: Original vs Converted data (24x24):[0m
+00 00 00 30 00 00 18 00  -> 00 80 82 06 1C 08 00 C0 
+00 0C 00 18 08 FF FC 00  -> 10 10 10 10 10 10 F0 F0 
+03 00 01 03 00 61 03 00  -> 10 10 10 18 18 10 00 00 
+32 03 00 1A 03 00 12 03  -> 00 80 81 C7 E2 18 07 00 
+00 04 03 00 04 03 00 08  -> 00 00 00 00 00 00 FF FF 
+03 00 18 03 00 78 03 00  -> 00 00 00 00 00 00 00 00 
+18 03 00 18 03 00 18 03  -> 00 00 00 3F 7F 00 00 10 
+00 18 03 0C 19 FF FE 18  -> 10 10 10 10 10 10 1F 1F 
+00 00 08 00 00 00 00 00  -> 10 10 10 10 18 18 10 00 
+[0;32mI (104735) idfzk: Converted character data (24x24, first 16 bytes):[0m
+00 80 82 06 1C 08 00 C0 
+10 10 10 10 10 10 F0 F0 
+[0;32mI (104745) idfzk: Character data (first 16 bytes):[0m
+00 80 82 06 1C 08 00 C0 
+10 10 10 10 10 10 F0 F0 
+... (total 72 bytes)
+[0;32mI (104805) idfzk: gt(c1=0xCE, c2=0xF7) = 3944, offset=0x00045540, base=0x001F43DE, total=0x0023991E[0m
+[0;32mI (104805) idfzk: Reading character at address: 0x0023991E, size: 72 bytes[0m
+[0;32mI (104965) idfzk: Original vs Converted data (24x24):[0m
+00 00 00 00 00 00 00 00  -> 00 08 08 88 08 08 08 08 
+0C 7F FF FE 00 C6 00 00  -> F8 F8 08 08 08 F8 F8 08 
+C6 00 00 C6 00 10 C6 18  -> 08 08 08 88 8C 0C 08 00 
+1F FF FC 18 C6 18 18 C6  -> 00 00 00 FF FF 01 81 C1 
+18 18 C6 18 18 C6 18 18  -> 7F 3F 01 01 01 7F FF C1 
+C6 18 19 87 D8 1B 03 F8  -> C1 C1 81 FF FF 01 00 00 
+1A 00 18 1C 00 18 18 00  -> 00 00 00 7F 3F 12 11 10 
+18 18 00 18 1F FF F8 18  -> 10 10 10 10 10 10 10 10 
+00 18 10 00 10 00 00 00  -> 10 10 10 7F 3F 00 00 00 
+[0;32mI (105005) idfzk: Converted character data (24x24, first 16 bytes):[0m
+00 08 08 88 08 08 08 08 
+F8 F8 08 08 08 F8 F8 08 
+[0;32mI (105015) idfzk: Character data (first 16 bytes):[0m
+00 08 08 88 08 08 08 08 
+F8 F8 08 08 08 F8 F8 08 
+... (total 72 bytes)
+[0;32mI (105075) idfzk: gt(c1=0xCA, c2=0xA1) = 3482, offset=0x0003D350, base=0x001F43DE, total=0x0023172E[0m
+[0;32mI (105075) idfzk: Reading character at address: 0x0023172E, size: 72 bytes[0m
+[0;32mI (105235) idfzk: Original vs Converted data (24x24):[0m
+00 10 00 00 1C 00 02 18  -> 00 00 00 00 C0 70 3C 18 
+80 03 98 60 07 18 30 06  -> 08 00 00 7F 3E 82 C0 60 
+19 18 0C 13 CC 08 06 08  -> 44 48 18 30 E0 40 00 00 
+10 1C 00 22 70 60 03 FF  -> 00 40 22 21 10 10 FE FC 
+F0 03 00 60 0F 00 60 33  -> 44 46 46 47 45 45 44 44 
+00 60 43 FF E0 03 00 60  -> 44 FE FE 04 00 00 00 00 
+03 00 60 03 FF E0 03 00  -> 00 00 00 00 00 00 FF 7F 
+60 03 00 60 03 00 60 03  -> 22 22 22 22 22 22 22 22 
+FF E0 03 00 60 02 00 40  -> 22 FF 7F 00 00 00 00 00 
+[0;32mI (105265) idfzk: Converted character data (24x24, first 16 bytes):[0m
+00 00 00 00 C0 70 3C 18 
+08 00 00 7F 3E 82 C0 60 
+[0;32mI (105285) idfzk: Character data (first 16 bytes):[0m
+00 00 00 00 C0 70 3C 18 
+08 00 00 7F 3E 82 C0 60 
+... (total 72 bytes)
+[0;32mI (105345) idfzk: gt(c1=0xC6, c2=0xBC) = 3133, offset=0x00037128, base=0x001F43DE, total=0x0022B506[0m
+[0;32mI (105345) idfzk: Reading character at address: 0x0022B506, size: 72 bytes[0m
+[0;32mI (105495) idfzk: Original vs Converted data (24x24):[0m
+01 02 00 01 C3 80 01 83  -> 00 08 08 48 C8 88 08 3F 
+0C 7F FF FE 01 83 00 01  -> BE 8A 88 88 88 88 BF BE 
+83 00 18 00 18 0C FF FC  -> 8A 88 88 C8 CC 8C 08 00 
+06 03 00 04 03 10 61 63  -> 00 04 0C 38 10 C3 31 8C 
+1C 31 33 30 1A 1B 20 12  -> 80 84 8C B8 90 80 FF FF 
+13 40 04 03 0C 05 FF FE  -> 80 A0 98 8E C4 C4 80 00 
+0C 03 00 7C 03 00 0C 03  -> 00 02 02 02 3F 7F 00 00 
+00 0C 03 00 0C 03 00 0C  -> 00 00 00 00 00 00 FF 7F 
+03 00 04 03 00 00 02 00  -> 00 00 00 00 00 00 00 00 
+[0;32mI (105535) idfzk: Converted character data (24x24, first 16 bytes):[0m
+00 08 08 48 C8 88 08 3F 
+BE 8A 88 88 88 88 BF BE 
+[0;32mI (105545) idfzk: Character data (first 16 bytes):[0m
+00 08 08 48 C8 88 08 3F 
+BE 8A 88 88 88 88 BF BE 
+... (total 72 bytes)
+[0;32mI (105615) idfzk: gt(c1=0xCF, c2=0xE7) = 4022, offset=0x00046B30, base=0x001F43DE, total=0x0023AF0E[0m
+[0;32mI (105615) idfzk: Reading character at address: 0x0023AF0E, size: 72 bytes[0m
+[0;32mI (105765) idfzk: Original vs Converted data (24x24):[0m
+00 10 00 00 18 00 00 3C  -> 00 00 00 00 00 00 80 40 
+00 00 30 00 00 60 40 00  -> 60 30 1C 0F 06 04 00 80 
+C0 60 01 80 F0 02 01 C0  -> C0 F0 60 40 00 00 00 00 
+0F FF 00 07 06 00 00 0C  -> 00 00 00 00 01 43 C3 E3 
+00 00 38 20 00 E0 38 01  -> D1 D1 59 49 4D 47 43 41 
+00 70 07 FF E0 03 C0 C0  -> C0 E0 78 30 10 00 00 00 
+00 01 80 00 03 00 00 06  -> 00 00 80 80 40 40 40 20 
+00 00 1C 00 00 70 00 01  -> 20 30 10 18 08 0C 06 03 
+C0 00 0E 00 00 30 00 00  -> 01 00 00 00 00 00 00 00 
+[0;32mI (105805) idfzk: Converted character data (24x24, first 16 bytes):[0m
+00 00 00 00 00 00 80 40 
+60 30 1C 0F 06 04 00 80 
+[0;32mI (105815) idfzk: Character data (first 16 bytes):[0m
+00 00 00 00 00 00 80 40 
+60 30 1C 0F 06 04 00 80 
+... (total 72 bytes)
+[0;32mI (105875) idfzk: gt(c1=0xCA, c2=0xD0) = 3529, offset=0x0003E088, base=0x001F43DE, total=0x00232466[0m
+[0;32mI (105875) idfzk: Reading character at address: 0x00232466, size: 72 bytes[0m
+[0;32mI (106035) idfzk: Original vs Converted data (24x24):[0m
+00 30 00 00 18 00 00 0C  -> 00 10 10 10 90 10 10 10 
+00 00 08 0C 7F FF FE 00  -> 10 10 11 F3 FE 14 10 10 
+18 00 00 18 00 08 18 30  -> 10 10 90 90 18 18 10 00 
+0F FF F8 0C 18 30 0C 18  -> 00 00 00 00 FF FF 01 01 
+30 0C 18 30 0C 18 30 0C  -> 01 01 01 FF FF 01 01 01 
+18 30 0C 18 30 0C 18 30  -> 01 01 FF FF 01 00 00 00 
+0C 18 30 0C 18 30 0C 19  -> 00 00 00 00 1F 0F 00 00 
+F0 0C 18 60 08 18 40 00  -> 00 00 00 FF 7F 00 00 04 
+18 00 00 18 00 00 10 00  -> 04 1C 0F 07 00 00 00 00 
+[0;32mI (106075) idfzk: Converted character data (24x24, first 16 bytes):[0m
+00 10 10 10 90 10 10 10 
+10 10 11 F3 FE 14 10 10 
+[0;32mI (106085) idfzk: Character data (first 16 bytes):[0m
+00 10 10 10 90 10 10 10 
+10 10 11 F3 FE 14 10 10 
+... (total 72 bytes)
+[0;32mI (111095) idfzk: ========== Font library test completed ==========[0m

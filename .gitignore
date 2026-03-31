@@ -1,0 +1,27 @@
+# Build directory
+build/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Cache directories
+.cache/
+
+# Log files
+*.log
+
+# Binary files
+*.bin
+*.elf
+*.hex
+
+# Configuration files
+sdkconfig.old
+
+# Python files
+__pycache__/
+*.pyc

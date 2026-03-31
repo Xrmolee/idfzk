@@ -1,0 +1,3 @@
+info: INFO: Symbol IDF_TARGET_LINUX defined in multiple locations (see below). Please check if this is a correct behavior or a random name match:
+    F:\Espressif\frameworks\esp-idf-v5.3\Kconfig:78
+    F:\Espressif\frameworks\esp-idf-v5.3\Kconfig:162

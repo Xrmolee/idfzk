@@ -1,0 +1,73 @@
+[1/7] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/idfzk.c.obj
+[2/7] Linking C static library esp-idf\main\libmain.a
+[3/7] Generating ld/sections.ld
+info: INFO: Symbol IDF_TARGET_LINUX defined in multiple locations (see below). Please check if this is a correct behavior or a random name match:
+    F:\Espressif\frameworks\esp-idf-v5.3\Kconfig:162
+    F:\Espressif\frameworks\esp-idf-v5.3\Kconfig:78
+[4/7] Linking CXX executable idfzk.elf
+[5/7] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated G:/idfzk/build/idfzk.bin
+[6/7] cmd.exe /C "cd /D G:\idfzk\build\esp-idf\esptool_py && F:\esp-idfl\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe F:/Espressif/frameworks/esp-idf-v5.3/components/partition_table/check_sizes.py --offset 0x8000 partition --type app G:/idfzk/build/partition_table/partition-table.bin G:/idfzk/build/idfzk.bin"
+idfzk.bin binary size 0xe1a10 bytes. Smallest app partition is 0x400000 bytes. 0x31e5f0 bytes (78%) free.
+[6/7] cmd.exe /C "cd /D F:\Espressif\frameworks\esp-idf-v5.3\components\esptool_py && F:\esp-idfl\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=F:/Espressif/frameworks/esp-idf-v5.3 -D SERIAL_TOOL=F:/esp-idfl/Espressif/python_env/idf5.3_py3.11_env/Scripts/python.exe;;F:/Espressif/frameworks/esp-idf-v5.3/components/esptool_py/esptool/esptool.py;--chip;esp32s3 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@app-flash_argsesptool.py --chip esp32s3 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 16MB 0x20000 idfzk.bin
+esptool.py v4.8.1
+Serial port COM3
+Connecting....
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_3v3)
+Crystal is 40MHz
+MAC: 24:58:7c:da:36:64
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00020000 to 0x00101fff...
+Compressed 924176 bytes to 577444...
+Writing at 0x00020000... (2 %)
+Writing at 0x0002dbf0... (5 %)
+Writing at 0x00036f27... (8 %)
+Writing at 0x0003bd86... (11 %)
+Writing at 0x0004525e... (13 %)
+Writing at 0x0004e42a... (16 %)
+Writing at 0x000542d7... (19 %)
+Writing at 0x0005aae3... (22 %)
+Writing at 0x00060a0f... (25 %)
+Writing at 0x00066bca... (27 %)
+Writing at 0x0006cf8b... (30 %)
+Writing at 0x00072f91... (33 %)
+Writing at 0x00078b87... (36 %)
+Writing at 0x0007ed7e... (38 %)
+Writing at 0x00083bd6... (41 %)
+Writing at 0x00088c38... (44 %)
+Writing at 0x0008e106... (47 %)
+Writing at 0x00093373... (50 %)
+Writing at 0x000985c6... (52 %)
+Writing at 0x0009dac8... (55 %)
+Writing at 0x000a34a5... (58 %)
+Writing at 0x000a8e51... (61 %)
+Writing at 0x000ae665... (63 %)
+Writing at 0x000b4321... (66 %)
+Writing at 0x000b9fc0... (69 %)
+Writing at 0x000bf9ba... (72 %)
+Writing at 0x000c53ef... (75 %)
+Writing at 0x000cb1b8... (77 %)
+Writing at 0x000d08c8... (80 %)
+Writing at 0x000d5e34... (83 %)
+Writing at 0x000dcf1f... (86 %)
+Writing at 0x000e7ffb... (88 %)
+Writing at 0x000edeb4... (91 %)
+Writing at 0x000f427c... (94 %)
+Writing at 0x000facb4... (97 %)
+Writing at 0x000ffd58... (100 %)
+Wrote 924176 bytes (577444 compressed) at 0x00020000 in 13.0 seconds (effective 568.3 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+ -D WORKING_DIRECTORY=G:/idfzk/build -P F:/Espressif/frameworks/esp-idf-v5.3/components/esptool_py/run_serial_tool.cmake"

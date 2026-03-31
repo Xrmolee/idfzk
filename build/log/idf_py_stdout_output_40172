@@ -1,0 +1,911 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x2b (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2db0
+entry 0x403c8914
+[0;32mI (27) boot: ESP-IDF v5.3 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar 30 2026 12:24:05[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (79) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (87) boot:  3 ota_0            OTA app          00 10 00020000 00400000[0m
+[0;32mI (94) boot:  4 ota_1            OTA app          00 11 00420000 00400000[0m
+[0;32mI (102) boot:  5 assets           Unknown data     01 82 00820000 007e0000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (113) boot: No factory image, trying OTA 0[0m
+[0;32mI (118) esp_image: segment 0: paddr=00020020 vaddr=3c0c0020 size=2c484h (181380) map[0m
+[0;32mI (159) esp_image: segment 1: paddr=0004c4ac vaddr=3fc9ac00 size=03b6ch ( 15212) load[0m
+[0;32mI (163) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=bb124h (766244) map[0m
+[0;32mI (303) esp_image: segment 3: paddr=0010b14c vaddr=3fc9e76c size=01270h (  4720) load[0m
+[0;32mI (304) esp_image: segment 4: paddr=0010c3c4 vaddr=40374000 size=16be4h ( 93156) load[0m
+[0;32mI (338) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (382) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (382) boot: Disabling RNG early entropy source...[0m
+[0;32mI (393) cpu_start: Multicore app[0m
+[0;32mI (402) cpu_start: Pro cpu start user code[0m
+[0;32mI (402) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (402) app_init: Application information:[0m
+[0;32mI (405) app_init: Project name:     idfzk[0m
+[0;32mI (410) app_init: App version:      1[0m
+[0;32mI (414) app_init: Compile time:     Mar 30 2026 12:23:50[0m
+[0;32mI (420) app_init: ELF file SHA256:  27c68e59e...[0m
+[0;32mI (426) app_init: ESP-IDF:          v5.3[0m
+[0;32mI (430) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (435) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (440) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (445) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (452) heap_init: At 3FCA4270 len 000454A0 (277 KiB): RAM[0m
+[0;32mI (458) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (464) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (470) heap_init: At 600FE100 len 00001EE8 (7 KiB): RTCRAM[0m
+[0;32mI (478) spi_flash: detected chip: generic[0m
+[0;32mI (481) spi_flash: flash io: dio[0m
+[0;32mI (485) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (492) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (499) main_task: Started on CPU0[0m
+[0;32mI (529) main_task: Calling app_main()[0m
+[0;32mI (529) idfzk: Initializing ESP32-S3 OLED display module[0m
+[0;32mI (529) idfzk: Initializing SPIFFS...[0m
+[0;32mI (989) idfzk: SPIFFS initialized successfully[0m
+[0;32mI (989) idfzk: Partition size: total: 7582961, used: 4361878[0m
+[0;32mI (989) idfzk: Loading font file: /spiffs/GT32L24M0140.bin[0m
+[0;32mI (989) idfzk: Font file size: 4194304 bytes[0m
+[0;32mI (999) idfzk: Font file loaded successfully[0m
+[0;32mI (999) idfzk: Loading uni2gbk mapping file: /spiffs/uni2gbk.bin[0m
+[0;32mI (1139) idfzk: Uni2gbk file size: 131072 bytes[0m
+[0;32mI (1139) idfzk: Uni2gbk file loaded successfully[0m
+[0;32mI (1139) idfzk: Initializing SSD1306...[0m
+[0;32mI (1139) gpio: GPIO[1]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1149) gpio: GPIO[6]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1159) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1269) SSD1306: SPI HOST_ID=1[0m
+[0;32mI (1269) SSD1306: spi_bus_initialize=0[0m
+[0;32mI (1269) SSD1306: spi_bus_add_device=0[0m
+[0;32mI (1299) idfzk: SSD1306 initialized successfully[0m
+[0;32mI (1339) idfzk: ========== WiFi Initialization ==========[0m
+[0;32mI (1339) idfzk: Initializing WiFi...[0m
+[0;32mI (1359) pp: pp rom version: e7ae62f[0m
+[0;32mI (1359) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (1369) wifi:wifi driver task: 3fcaf7c8, prio:23, stack:6656, core=0[0m
+[0;32mI (1379) wifi:wifi firmware version: 0caa81945[0m
+[0;32mI (1379) wifi:wifi certification version: v7.0[0m
+[0;32mI (1379) wifi:config NVS flash: enabled[0m
+[0;32mI (1379) wifi:config nano formating: disabled[0m
+[0;32mI (1379) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1389) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1389) wifi:Init management short buffer num: 32[0m
+[0;32mI (1389) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1399) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (1399) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1409) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1409) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1419) wifi_init: rx ba win: 6[0m
+[0;32mI (1419) wifi_init: accept mbox: 6[0m
+[0;32mI (1419) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1429) wifi_init: udp mbox: 6[0m
+[0;32mI (1429) wifi_init: tcp mbox: 6[0m
+[0;32mI (1429) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1439) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1439) wifi_init: tcp mss: 1440[0m
+[0;32mI (1449) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1449) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1459) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;32mI (1499) wifi:mode : sta (24:58:7c:da:36:64)[0m
+[0;32mI (1499) wifi:enable tsf[0m
+[0;32mI (1499) idfzk: WiFi initialized successfully[0m
+[0;32mI (1499) idfzk: WiFi station started[0m
+[0;32mI (2739) idfzk: WiFi config loaded: SSID=YourWiFiName[0m
+[0;32mI (2739) idfzk: Found WiFi config, attempting to connect...[0m
+[0;32mI (2739) idfzk: Connecting to WiFi SSID: YourWiFiName[0m
+[0;32mI (4559) idfzk: Waiting for WiFi connection... attempt 1/5[0m
+[0;33mW (5229) idfzk: WiFi disconnected[0m
+[0;32mI (6769) idfzk: Waiting for WiFi connection... attempt 2/5[0m
+[0;32mI (8979) idfzk: Waiting for WiFi connection... attempt 3/5[0m
+[0;32mI (11189) idfzk: Waiting for WiFi connection... attempt 4/5[0m
+[0;32mI (13399) idfzk: Waiting for WiFi connection... attempt 5/5[0m
+[0;33mW (13399) idfzk: WiFi connection failed after 5 attempts, starting SmartConfig...[0m
+[0;32mI (13399) idfzk: Starting SmartConfig...[0m
+[0;32mI (13459) smartconfig: SC version: V3.0.1[0m
+[0;32mI (14459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (15459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (16459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (17459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (18279) wifi:ic_enable_sniffer[0m
+[0;32mI (18279) smartconfig: Start to find channel...[0m
+[0;32mI (18279) idfzk: SmartConfig scan done[0m
+[0;32mI (18459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (19459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (20459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (21459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (22459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (23459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (24459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (25459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (26459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (27459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (28459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (29459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (30459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (31459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (32459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (33459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (34459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (35459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (36459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (37459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (38459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (39459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (40459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (41459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (42459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (43459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (44459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (45459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (46459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (47459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (48459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (49459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (50459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (51459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (52459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (53459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (54459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (55459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (56459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (57459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (58459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (59459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (60459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (61459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (62459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (63459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (64459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (65459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (66459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (67459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (68459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (69459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (70459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (71459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (72459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (73459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (74459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (75459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (76459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (77459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (78459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (79459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (80459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (81459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (82459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (83459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (84459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (85459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (86459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (87459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (88459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (89459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (90459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (91459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (92459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (93459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (94459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (95459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (96459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (97459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (98459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (99459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (100459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (101459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (102459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (103459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (104459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (105459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (106459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (107459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (108459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (109459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (110459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (111459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (112459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (113459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (114459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (115459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (116459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (117459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (118459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (119459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (120459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (121459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (122459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (123459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (124459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (125459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (126459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (127459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (128459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (129459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (130459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (131459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (132459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (133459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (134459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (135459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (136459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (137459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (138459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (139459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (140459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (141459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (142459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (143459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (144459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (145459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (146459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (147459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (148459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (149459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (150459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (151459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (152459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (153459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (154459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (155459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (156459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (157459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (158459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (159459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (160459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (161459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (162459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (163459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (164459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (165459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (166459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (167459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (168459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (169459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (170459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (171459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (172459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (173459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (174459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (175459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (176459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (177459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (178459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (179459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (180459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (181459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (182459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (183459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (184459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (185459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (186459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (187459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (188459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (189459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (190459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (191459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (192459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (193459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (194459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (195459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (196459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (197459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (198459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (199459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (200459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (201459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (202459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (203459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (204459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (205459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (206459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (207459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (208459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (209459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (210459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (211459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (212459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (213459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (214459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (215459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (216459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (217459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (218459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (219459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (220459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (221459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (222459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (223459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (224459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (225459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (226459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (227459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (228459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (229459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (230459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (231459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (232459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (233459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (234459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (235459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (236459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (237459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (238459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (239459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (240459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (241459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (242459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (243459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (244459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (245459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (246459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (247459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (248459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (249459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (250459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (251459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (252459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (253459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (254459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (255459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (256459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (257459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (258459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (259459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (260459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (261459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (262459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (263459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (264459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (265459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (266459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (267459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (268459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (269459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (270459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (271459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (272459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (273459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (274459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (275459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (276459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (277459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (278459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (279459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (280459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (281459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (282459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (283459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (284459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (285459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (286459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (287459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (288459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (289459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (290459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (291459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (292459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (293459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (294459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (295459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (296459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (297459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (298459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (299459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (300459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (301459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (302459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (303459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (304459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (305459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (306459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (307459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (308459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (309459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (310459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (311459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (312459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (313459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (314459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (315459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (316459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (317459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (318459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (319459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (320459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (321459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (322459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (323459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (324459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (325459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (326459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (327459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (328459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (329459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (330459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (331459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (332459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (333459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (334459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (335459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (336459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (337459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (338459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (339459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (340459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (341459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (342459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (343459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (344459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (345459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (346459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (347459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (348459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (349459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (350459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (351459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (352459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (353459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (354459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (355459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (356459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (357459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (358459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (359459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (360459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (361459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (362459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (363459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (364459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (365459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (366459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (367459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (368459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (369459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (370459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (371459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (372459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (373459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (374459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (375459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (376459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (377459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (378459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (379459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (380459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (381459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (382459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (383459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (384459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (385459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (386459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (387459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (388459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (389459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (390459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (391459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (392459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (393459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (394459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (395459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (396459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (397459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (398459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (399459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (400459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (401459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (402459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (403459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (404459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (405459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (406459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (407459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (408459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (409459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (410459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (411459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (412459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (413459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (414459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (415459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (416459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (417459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (418459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (419459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (420459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (421459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (422459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (423459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (424459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (425459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (426459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (427459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (428459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (429459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (430459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (431459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (432459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (433459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (434459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (435459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (436459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (437459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (438459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (439459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (440459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (441459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (442459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (443459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (444459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (445459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (446459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (447459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (448459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (449459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (450459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (451459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (452459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (453459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (454459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (455459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (456459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (457459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (458459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (459459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (460459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (461459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (462459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (463459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (464459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (465459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (466459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (467459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (468459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (469459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (470459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (471459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (472459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (473459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (474459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (475459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (476459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (477459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (478459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (479459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (480459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (481459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (482459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (483459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (484459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (485459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (486459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (487459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (488459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (489459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (490459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (491459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (492459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (493459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (494459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (495459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (496459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (497459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (498459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (499459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (500459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (501459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (502459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (503459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (504459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (505459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (506459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (507459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (508459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (509459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (510459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (511459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (512459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (513459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (514459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (515459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (516459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (517459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (518459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (519459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (520459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (521459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (522459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (523459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (524459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (525459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (526459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (527459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (528459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (529459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (530459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (531459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (532459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (533459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (534459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (535459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (536459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (537459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (538459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (539459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (540459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (541459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (542459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (543459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (544459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (545459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (546459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (547459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (548459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (549459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (550459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (551459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (552459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (553459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (554459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (555459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (556459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (557459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (558459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (559459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (560459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (561459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (562459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (563459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (564459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (565459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (566459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (567459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (568459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (569459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (570459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (571459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (572459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (573459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (574459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (575459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (576459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (577459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (578459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (579459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (580459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (581459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (582459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (583459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (584459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (585459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (586459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (587459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (588459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (589459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (590459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (591459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (592459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (593459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (594459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (595459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (596459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (597459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (598459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (599459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (600459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (601459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (602459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (603459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (604459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (605459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (606459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (607459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (608459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (609459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (610459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (611459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (612459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (613459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (614459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (615459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (616459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (617459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (618459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (619459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (620459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (621459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (622459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (623459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (624459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (625459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (626459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (627459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (628459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (629459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (630459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (631459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (632459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (633459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (634459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (635459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (636459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (637459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (638459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (639459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (640459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (641459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (642459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (643459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (644459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (645459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (646459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (647459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (648459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (649459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (650459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (651459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (652459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (653459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (654459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (655459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (656459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (657459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (658459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (659459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (660459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (661459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (662459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (663459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (664459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (665459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (666459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (667459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (668459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (669459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (670459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (671459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (672459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (673459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (674459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (675459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (676459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (677459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (678459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (679459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (680459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (681459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (682459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (683459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (684459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (685459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (686459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (687459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (688459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (689459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (690459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (691459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (692459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (693459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (694459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (695459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (696459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (697459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (698459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (699459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (700459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (701459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (702459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (703459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (704459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (705459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (706459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (707459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (708459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (709459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (710459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (711459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (712459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (713459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (714459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (715459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (716459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (717459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (718459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (719459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (720459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (721459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (722459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (723459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (724459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (725459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (726459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (727459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (728459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (729459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (730459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (731459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (732459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (733459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (734459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (735459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (736459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (737459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (738459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (739459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (740459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (741459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (742459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (743459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (744459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (745459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (746459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (747459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (748459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (749459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (749589) smartconfig: TYPE: ESPTOUCH[0m
+[0;32mI (749589) smartconfig: T|PHONE MAC:3a:82:97:95:84:39[0m
+[0;32mI (749589) smartconfig: T|AP MAC:04:79:75:81:bb:7c[0m
+[0;32mI (749589) smartconfig: Found channel on 6-0. Start to get ssid and password...[0m
+[0;32mI (749599) idfzk: SmartConfig found channel[0m
+[0;32mI (750459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (751459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (751749) smartconfig: T|pswd: 13250232488[0m
+[0;32mI (751749) smartconfig: T|ssid: mi[0m
+[0;32mI (751749) smartconfig: T|bssid: 04:79:75:81:bb:7c[0m
+[0;32mI (751749) wifi:ic_disable_sniffer[0m
+[0;32mI (751759) idfzk: SmartConfig got SSID and password[0m
+[0;32mI (751759) idfzk: SSID: mi[0m
+[0;32mI (752309) idfzk: WiFi config saved: SSID=mi[0m
+[0;32mI (752309) idfzk: Connecting to WiFi SSID: mi[0m
+[0;32mI (752439) wifi:new:<11,2>, old:<6,0>, ap:<255,255>, sta:<11,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (752439) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (752439) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (752449) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (752459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (752519) wifi:connected with mi, aid = 1, channel 11, 40D, bssid = ec:60:73:f9:5e:d9[0m
+[0;32mI (752519) wifi:security: WPA2-PSK, phy: bgn, rssi: -58[0m
+[0;32mI (752529) wifi:pm start, type: 1[0m
+
+[0;32mI (752529) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (752529) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (752539) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (752579) wifi:<ba-add>idx:0 (ifx:0, ec:60:73:f9:5e:d9), tid:0, ssn:4, winSize:64[0m
+[0;32mI (753459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (753549) esp_netif_handlers: sta ip: 192.168.2.152, mask: 255.255.255.0, gw: 192.168.2.1[0m
+[0;32mI (753549) idfzk: Got IP address: 192.168.2.152[0m
+[0;32mI (753979) wifi:<ba-add>idx:1 (ifx:0, ec:60:73:f9:5e:d9), tid:6, ssn:1, winSize:64[0m
+[0;32mI (754459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (755459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (756459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (756639) idfzk: SmartConfig send ack done[0m
+[0;32mI (757459) idfzk: SmartConfig waiting for config...[0m
+[0;32mI (757459) idfzk: SmartConfig completed successfully[0m
+[0;32mI (760199) idfzk: ========== Testing font library ==========[0m
+[0;32mI (760199) idfzk: Test 1: Displaying '胖达科技' with 16x16 font[0m
+[0;32mI (765989) idfzk: Test 2: Displaying '路明电脑' with 12x12 font[0m
+[0;32mI (771789) idfzk: Test 3: Displaying '路明电脑' with 24x24 font[0m
+[0;32mI (777669) idfzk: Test 4: Displaying '江西省萍乡市' with 12x12 font[0m
+[0;32mI (783839) idfzk: Test 5: Displaying '江西省萍乡市' with 16x16 font[0m
+[0;32mI (790079) idfzk: Test 6: Displaying '江西省萍乡市' with 24x24 font[0m
+[0;32mI (796349) idfzk: ========== Font library test completed ==========[0m
+[0;32mI (796349) idfzk: ========== MQTT Initialization ==========[0m
+[0;32mI (796349) idfzk: Initializing MQTT...[0m
+[0;31mE (796409) idfzk: Invalid MQTT config format[0m
+[0;31mE (796409) idfzk: Failed to read MQTT config[0m
+[0;31mE (796409) idfzk: Failed to initialize MQTT[0m

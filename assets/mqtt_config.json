@@ -1,0 +1,11 @@
+{
+  "server": "mqtts://f43fd9b3.ala.cn-hangzhou.emqxsl.cn",
+  "port": 1883,
+  "username": "esp32",
+  "password": "esp32-s3",
+  "client_id": "esp32_device",
+  "sub_topics": [
+    "Python_Server/status",
+    "Python_Server/ota"
+  ]
+}

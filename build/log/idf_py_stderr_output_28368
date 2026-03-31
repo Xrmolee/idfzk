@@ -1,0 +1,36 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM3 instead...[0m
+[0;33m--- esp-idf-monitor 1.6.2 on \\.\COM3 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x420157cb: task_wdt_timeout_handling at F:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/task_wdt/task_wdt.c:434
+--- 0x42015be8: task_wdt_isr at F:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/task_wdt/task_wdt.c:507
+--- 0x40377641: _xt_lowint1 at F:/Espressif/frameworks/esp-idf-v5.3/components/xtensa/xtensa_vectors.S:1240
+--- 0x400559dd: _xtos_set_intlevel in ROM
+--- 0x4037e143: vPortClearInterruptMaskFromISR at F:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+---  (inlined by) vPortExitCritical at F:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:504
+--- 0x4037683b: vPortExitCriticalSafe at F:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:596
+---  (inlined by) esp_intr_noniram_enable at F:/Espressif/frameworks/esp-idf-v5.3/components/esp_hw_support/intr_alloc.c:914
+--- 0x40377ebf: spi_flash_enable_interrupts_caches_and_other_cpu at F:/Espressif/frameworks/esp-idf-v5.3/components/spi_flash/cache_utils.c:253
+--- 0x40378b7f: cache_enable at F:/Espressif/frameworks/esp-idf-v5.3/components/spi_flash/spi_flash_os_func_app.c:65
+--- 0x40378b8a: spi1_end at F:/Espressif/frameworks/esp-idf-v5.3/components/spi_flash/spi_flash_os_func_app.c:140
+--- 0x4037b415: spiflash_end_default at F:/Espressif/frameworks/esp-idf-v5.3/components/spi_flash/esp_flash_api.c:203
+--- 0x4037863f: esp_flash_read at F:/Espressif/frameworks/esp-idf-v5.3/components/spi_flash/esp_flash_api.c:906
+--- 0x4201473a: esp_partition_read at F:/Espressif/frameworks/esp-idf-v5.3/components/esp_partition/partition_target.c:38
+--- 0x4200dd77: spiffs_api_read at F:/Espressif/frameworks/esp-idf-v5.3/components/spiffs/spiffs_api.c:27
+--- 0x4201186b: spiffs_phys_rd at F:/Espressif/frameworks/esp-idf-v5.3/components/spiffs/spiffs/src/spiffs_cache.c:161
+--- 0x4200f54d: spiffs_obj_lu_find_entry_visitor at F:/Espressif/frameworks/esp-idf-v5.3/components/spiffs/spiffs/src/spiffs_nucleus.c:166
+--- 0x4200f983: spiffs_obj_lu_find_id_and_span at F:/Espressif/frameworks/esp-idf-v5.3/components/spiffs/spiffs/src/spiffs_nucleus.c:537 (discriminator 4)
+--- 0x4200e830: SPIFFS_lseek at F:/Espressif/frameworks/esp-idf-v5.3/components/spiffs/spiffs/src/spiffs_hydrogen.c:636
+--- 0x4200db99: vfs_spiffs_lseek at F:/Espressif/frameworks/esp-idf-v5.3/components/spiffs/esp_spiffs.c:591
+--- 0x42009adb: esp_vfs_lseek at F:/Espressif/frameworks/esp-idf-v5.3/components/vfs/vfs.c:515 (discriminator 3)
+--- 0x42084fb5: __sseek at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:113
+--- 0x420853f5: _fseeko_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fseeko.c:307
+--- 0x4208483e: _fseek_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fseek.c:89
+---  (inlined by) fseek at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fseek.c:99
+--- 0x4200adad: utf8_to_gbk at G:/idfzk/main/idfzk.c:680
+--- 0x4200ae2e: test_uni2gbk_conversion at G:/idfzk/main/idfzk.c:756
+--- 0x4200b7c8: app_main at G:/idfzk/main/idfzk.c:1168
+--- 0x4209f3c7: main_task at F:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+--- 0x4037dd9d: vPortTaskWrapper at F:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0m

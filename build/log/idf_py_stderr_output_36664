@@ -1,0 +1,14 @@
+CMake Error at F:/Espressif/frameworks/esp-idf-v5.3/tools/cmake/build.cmake:552 (message):
+  ERROR: Error during request
+
+  URL:
+  https://components-file.espressif.com/components/espressif/esp_smartconfig.json
+
+
+  Status code: 403 Forbidden
+
+Call Stack (most recent call first):
+  F:/Espressif/frameworks/esp-idf-v5.3/tools/cmake/project.cmake:710 (idf_build_process)
+  CMakeLists.txt:8 (project)
+
+

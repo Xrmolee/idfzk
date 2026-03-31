@@ -1,0 +1,410 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x2b (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2db0
+entry 0x403c8914
+[0;32mI (27) boot: ESP-IDF v5.3 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar 30 2026 12:24:05[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (79) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (87) boot:  3 ota_0            OTA app          00 10 00020000 00400000[0m
+[0;32mI (94) boot:  4 ota_1            OTA app          00 11 00420000 00400000[0m
+[0;32mI (102) boot:  5 assets           Unknown data     01 82 00820000 007e0000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (113) esp_image: segment 0: paddr=00020020 vaddr=3c0a0020 size=25d48h (154952) map[0m
+[0;32mI (150) esp_image: segment 1: paddr=00045d70 vaddr=3fc9ab00 size=04dcch ( 19916) load[0m
+[0;32mI (154) esp_image: segment 2: paddr=0004ab44 vaddr=40374000 size=054d4h ( 21716) load[0m
+[0;32mI (160) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=9fe48h (654920) map[0m
+[0;32mI (281) esp_image: segment 4: paddr=000efe70 vaddr=403794d4 size=1153ch ( 70972) load[0m
+[0;32mI (306) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (307) boot: Disabling RNG early entropy source...[0m
+[0;32mI (318) cpu_start: Multicore app[0m
+[0;32mI (328) cpu_start: Pro cpu start user code[0m
+[0;32mI (328) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (328) app_init: Application information:[0m
+[0;32mI (331) app_init: Project name:     idfzk[0m
+[0;32mI (335) app_init: App version:      1[0m
+[0;32mI (340) app_init: Compile time:     Mar 30 2026 12:23:50[0m
+[0;32mI (346) app_init: ELF file SHA256:  bed2b840a...[0m
+[0;32mI (351) app_init: ESP-IDF:          v5.3[0m
+[0;32mI (356) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (360) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (365) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (370) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (377) heap_init: At 3FCA3B68 len 00045BA8 (278 KiB): RAM[0m
+[0;32mI (384) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (390) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (396) heap_init: At 600FE100 len 00001EE8 (7 KiB): RTCRAM[0m
+[0;32mI (403) spi_flash: detected chip: generic[0m
+[0;32mI (407) spi_flash: flash io: dio[0m
+[0;32mI (411) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (418) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (425) main_task: Started on CPU0[0m
+[0;32mI (455) main_task: Calling app_main()[0m
+[0;32mI (455) idfzk: Initializing ESP32-S3 OLED display module[0m
+[0;32mI (455) idfzk: Initializing SPIFFS...[0m
+[0;32mI (915) idfzk: SPIFFS initialized successfully[0m
+[0;32mI (915) idfzk: Partition size: total: 7582961, used: 4361376[0m
+[0;32mI (915) idfzk: Loading font file: /spiffs/GT32L24M0140.bin[0m
+[0;32mI (915) idfzk: Font file size: 4194304 bytes[0m
+[0;32mI (925) idfzk: Font file loaded successfully[0m
+[0;32mI (925) idfzk: Loading uni2gbk mapping file: /spiffs/uni2gbk.bin[0m
+[0;32mI (1065) idfzk: Uni2gbk file size: 131072 bytes[0m
+[0;32mI (1065) idfzk: Uni2gbk file loaded successfully[0m
+[0;32mI (1065) idfzk: Initializing SSD1306...[0m
+[0;32mI (1065) gpio: GPIO[1]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1075) gpio: GPIO[6]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1085) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1195) SSD1306: SPI HOST_ID=1[0m
+[0;32mI (1195) SSD1306: spi_bus_initialize=0[0m
+[0;32mI (1195) SSD1306: spi_bus_add_device=0[0m
+[0;32mI (1225) idfzk: SSD1306 initialized successfully[0m
+[0;32mI (1265) idfzk: ========== WiFi Initialization ==========[0m
+[0;32mI (1265) idfzk: Initializing WiFi...[0m
+[0;32mI (1275) pp: pp rom version: e7ae62f[0m
+[0;32mI (1285) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (1295) wifi:wifi driver task: 3fcaf068, prio:23, stack:6656, core=0[0m
+[0;32mI (1305) wifi:wifi firmware version: 0caa81945[0m
+[0;32mI (1305) wifi:wifi certification version: v7.0[0m
+[0;32mI (1305) wifi:config NVS flash: enabled[0m
+[0;32mI (1305) wifi:config nano formating: disabled[0m
+[0;32mI (1305) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1315) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1315) wifi:Init management short buffer num: 32[0m
+[0;32mI (1315) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1325) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (1325) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1335) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1335) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1345) wifi_init: rx ba win: 6[0m
+[0;32mI (1345) wifi_init: accept mbox: 6[0m
+[0;32mI (1345) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1355) wifi_init: udp mbox: 6[0m
+[0;32mI (1355) wifi_init: tcp mbox: 6[0m
+[0;32mI (1355) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1365) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1365) wifi_init: tcp mss: 1440[0m
+[0;32mI (1375) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1375) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1385) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;32mI (1425) wifi:mode : sta (24:58:7c:da:36:64)[0m
+[0;32mI (1425) wifi:enable tsf[0m
+[0;32mI (1425) idfzk: WiFi initialized successfully[0m
+[0;32mI (1425) idfzk: WiFi station started[0m
+[0;32mI (2665) idfzk: WiFi config loaded: SSID=YourWiFiName[0m
+[0;32mI (2665) idfzk: Found WiFi config, attempting to connect...[0m
+[0;32mI (2665) idfzk: Connecting to WiFi SSID: YourWiFiName[0m
+[0;32mI (4415) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (5085) idfzk: WiFi disconnected[0m
+[0;32mI (5085) idfzk: Attempting to reconnect...[0m
+[0;32mI (6645) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (7495) idfzk: WiFi disconnected[0m
+[0;32mI (7495) idfzk: Attempting to reconnect...[0m
+[0;32mI (8875) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (9905) idfzk: WiFi disconnected[0m
+[0;32mI (9905) idfzk: Attempting to reconnect...[0m
+[0;32mI (11115) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (12325) idfzk: WiFi disconnected[0m
+[0;32mI (12325) idfzk: Attempting to reconnect...[0m
+[0;32mI (13355) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (14735) idfzk: WiFi disconnected[0m
+[0;32mI (14735) idfzk: Attempting to reconnect...[0m
+[0;32mI (15585) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (17145) idfzk: WiFi disconnected[0m
+[0;32mI (17145) idfzk: Attempting to reconnect...[0m
+[0;32mI (17815) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (19565) idfzk: WiFi disconnected[0m
+[0;32mI (19565) idfzk: Attempting to reconnect...[0m
+[0;32mI (20035) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (21975) idfzk: WiFi disconnected[0m
+[0;32mI (21975) idfzk: Attempting to reconnect...[0m
+[0;32mI (22265) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (24385) idfzk: WiFi disconnected[0m
+[0;32mI (24385) idfzk: Attempting to reconnect...[0m
+[0;32mI (24485) idfzk: Waiting for WiFi connection...[0m
+[0;32mI (26705) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (26795) idfzk: WiFi disconnected[0m
+[0;32mI (26795) idfzk: Attempting to reconnect...[0m
+[0;32mI (28925) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (29215) idfzk: WiFi disconnected[0m
+[0;32mI (29215) idfzk: Attempting to reconnect...[0m
+[0;32mI (31155) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (31625) idfzk: WiFi disconnected[0m
+[0;32mI (31625) idfzk: Attempting to reconnect...[0m
+[0;32mI (33385) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (34035) idfzk: WiFi disconnected[0m
+[0;32mI (34035) idfzk: Attempting to reconnect...[0m
+[0;32mI (35615) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (36445) idfzk: WiFi disconnected[0m
+[0;32mI (36445) idfzk: Attempting to reconnect...[0m
+[0;32mI (37845) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (38865) idfzk: WiFi disconnected[0m
+[0;32mI (38865) idfzk: Attempting to reconnect...[0m
+[0;32mI (40075) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (41275) idfzk: WiFi disconnected[0m
+[0;32mI (41275) idfzk: Attempting to reconnect...[0m
+[0;32mI (42305) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (43685) idfzk: WiFi disconnected[0m
+[0;32mI (43685) idfzk: Attempting to reconnect...[0m
+[0;32mI (44535) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (46105) idfzk: WiFi disconnected[0m
+[0;32mI (46105) idfzk: Attempting to reconnect...[0m
+[0;32mI (46765) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (48515) idfzk: WiFi disconnected[0m
+[0;32mI (48515) idfzk: Attempting to reconnect...[0m
+[0;32mI (48985) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (50925) idfzk: WiFi disconnected[0m
+[0;32mI (50925) idfzk: Attempting to reconnect...[0m
+[0;32mI (51215) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (53335) idfzk: WiFi disconnected[0m
+[0;32mI (53335) idfzk: Attempting to reconnect...[0m
+[0;32mI (53435) idfzk: Waiting for WiFi connection...[0m
+[0;32mI (55655) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (55745) idfzk: WiFi disconnected[0m
+[0;32mI (55745) idfzk: Attempting to reconnect...[0m
+[0;32mI (57875) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (58165) idfzk: WiFi disconnected[0m
+[0;32mI (58165) idfzk: Attempting to reconnect...[0m
+[0;32mI (60105) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (60575) idfzk: WiFi disconnected[0m
+[0;32mI (60575) idfzk: Attempting to reconnect...[0m
+[0;32mI (62335) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (62985) idfzk: WiFi disconnected[0m
+[0;32mI (62985) idfzk: Attempting to reconnect...[0m
+[0;32mI (64565) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (65395) idfzk: WiFi disconnected[0m
+[0;32mI (65395) idfzk: Attempting to reconnect...[0m
+[0;32mI (66795) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (67815) idfzk: WiFi disconnected[0m
+[0;32mI (67815) idfzk: Attempting to reconnect...[0m
+[0;32mI (69035) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (70225) idfzk: WiFi disconnected[0m
+[0;32mI (70225) idfzk: Attempting to reconnect...[0m
+[0;32mI (71265) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (72635) idfzk: WiFi disconnected[0m
+[0;32mI (72635) idfzk: Attempting to reconnect...[0m
+[0;32mI (73505) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (75055) idfzk: WiFi disconnected[0m
+[0;32mI (75055) idfzk: Attempting to reconnect...[0m
+[0;32mI (75735) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (77465) idfzk: WiFi disconnected[0m
+[0;32mI (77465) idfzk: Attempting to reconnect...[0m
+[0;32mI (77965) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (79875) idfzk: WiFi disconnected[0m
+[0;32mI (79875) idfzk: Attempting to reconnect...[0m
+[0;32mI (80185) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (82295) idfzk: WiFi disconnected[0m
+[0;32mI (82295) idfzk: Attempting to reconnect...[0m
+[0;32mI (82405) idfzk: Waiting for WiFi connection...[0m
+[0;32mI (84625) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (84705) idfzk: WiFi disconnected[0m
+[0;32mI (84705) idfzk: Attempting to reconnect...[0m
+[0;32mI (86845) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (87115) idfzk: WiFi disconnected[0m
+[0;32mI (87115) idfzk: Attempting to reconnect...[0m
+[0;32mI (89065) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (89525) idfzk: WiFi disconnected[0m
+[0;32mI (89525) idfzk: Attempting to reconnect...[0m
+[0;32mI (91285) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (91935) idfzk: WiFi disconnected[0m
+[0;32mI (91935) idfzk: Attempting to reconnect...[0m
+[0;32mI (93525) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (94355) idfzk: WiFi disconnected[0m
+[0;32mI (94355) idfzk: Attempting to reconnect...[0m
+[0;32mI (95755) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (96765) idfzk: WiFi disconnected[0m
+[0;32mI (96765) idfzk: Attempting to reconnect...[0m
+[0;32mI (97995) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (99175) idfzk: WiFi disconnected[0m
+[0;32mI (99175) idfzk: Attempting to reconnect...[0m
+[0;32mI (100225) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (101595) idfzk: WiFi disconnected[0m
+[0;32mI (101595) idfzk: Attempting to reconnect...[0m
+[0;32mI (102455) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (104005) idfzk: WiFi disconnected[0m
+[0;32mI (104005) idfzk: Attempting to reconnect...[0m
+[0;32mI (104685) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (106415) idfzk: WiFi disconnected[0m
+[0;32mI (106415) idfzk: Attempting to reconnect...[0m
+[0;32mI (106905) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (108825) idfzk: WiFi disconnected[0m
+[0;32mI (108835) idfzk: Attempting to reconnect...[0m
+[0;32mI (109125) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (111245) idfzk: WiFi disconnected[0m
+[0;32mI (111245) idfzk: Attempting to reconnect...[0m
+[0;32mI (111345) idfzk: Waiting for WiFi connection...[0m
+[0;32mI (113565) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (113655) idfzk: WiFi disconnected[0m
+[0;32mI (113655) idfzk: Attempting to reconnect...[0m
+[0;32mI (115785) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (116065) idfzk: WiFi disconnected[0m
+[0;32mI (116065) idfzk: Attempting to reconnect...[0m
+[0;32mI (118005) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (118475) idfzk: WiFi disconnected[0m
+[0;32mI (118475) idfzk: Attempting to reconnect...[0m
+[0;32mI (120235) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (120895) idfzk: WiFi disconnected[0m
+[0;32mI (120895) idfzk: Attempting to reconnect...[0m
+[0;32mI (122465) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (123305) idfzk: WiFi disconnected[0m
+[0;32mI (123305) idfzk: Attempting to reconnect...[0m
+[0;32mI (124695) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (125715) idfzk: WiFi disconnected[0m
+[0;32mI (125715) idfzk: Attempting to reconnect...[0m
+[0;32mI (126925) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (128125) idfzk: WiFi disconnected[0m
+[0;32mI (128135) idfzk: Attempting to reconnect...[0m
+[0;32mI (129155) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (130545) idfzk: WiFi disconnected[0m
+[0;32mI (130545) idfzk: Attempting to reconnect...[0m
+[0;32mI (131385) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (132955) idfzk: WiFi disconnected[0m
+[0;32mI (132955) idfzk: Attempting to reconnect...[0m
+[0;32mI (133615) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (135365) idfzk: WiFi disconnected[0m
+[0;32mI (135365) idfzk: Attempting to reconnect...[0m
+[0;32mI (135845) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (137785) idfzk: WiFi disconnected[0m
+[0;32mI (137785) idfzk: Attempting to reconnect...[0m
+[0;32mI (138065) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (140195) idfzk: WiFi disconnected[0m
+[0;32mI (140195) idfzk: Attempting to reconnect...[0m
+[0;32mI (140285) idfzk: Waiting for WiFi connection...[0m
+[0;32mI (142505) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (142605) idfzk: WiFi disconnected[0m
+[0;32mI (142605) idfzk: Attempting to reconnect...[0m
+[0;32mI (144735) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (145015) idfzk: WiFi disconnected[0m
+[0;32mI (145015) idfzk: Attempting to reconnect...[0m
+[0;32mI (146965) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (147435) idfzk: WiFi disconnected[0m
+[0;32mI (147435) idfzk: Attempting to reconnect...[0m
+[0;32mI (149195) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (149845) idfzk: WiFi disconnected[0m
+[0;32mI (149845) idfzk: Attempting to reconnect...[0m
+[0;32mI (151425) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (152255) idfzk: WiFi disconnected[0m
+[0;32mI (152255) idfzk: Attempting to reconnect...[0m
+[0;32mI (153655) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (154665) idfzk: WiFi disconnected[0m
+[0;32mI (154665) idfzk: Attempting to reconnect...[0m
+[0;32mI (155895) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (157085) idfzk: WiFi disconnected[0m
+[0;32mI (157085) idfzk: Attempting to reconnect...[0m
+[0;32mI (158125) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (159495) idfzk: WiFi disconnected[0m
+[0;32mI (159495) idfzk: Attempting to reconnect...[0m
+[0;32mI (160355) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (161905) idfzk: WiFi disconnected[0m
+[0;32mI (161905) idfzk: Attempting to reconnect...[0m
+[0;32mI (162585) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (164325) idfzk: WiFi disconnected[0m
+[0;32mI (164325) idfzk: Attempting to reconnect...[0m
+[0;32mI (164815) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (166735) idfzk: WiFi disconnected[0m
+[0;32mI (166735) idfzk: Attempting to reconnect...[0m
+[0;32mI (167035) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (169145) idfzk: WiFi disconnected[0m
+[0;32mI (169145) idfzk: Attempting to reconnect...[0m
+[0;32mI (169265) idfzk: Waiting for WiFi connection...[0m
+[0;32mI (171485) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (171555) idfzk: WiFi disconnected[0m
+[0;32mI (171555) idfzk: Attempting to reconnect...[0m
+[0;32mI (173705) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (173975) idfzk: WiFi disconnected[0m
+[0;32mI (173975) idfzk: Attempting to reconnect...[0m
+[0;32mI (175945) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (176385) idfzk: WiFi disconnected[0m
+[0;32mI (176385) idfzk: Attempting to reconnect...[0m
+[0;32mI (178175) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (178795) idfzk: WiFi disconnected[0m
+[0;32mI (178795) idfzk: Attempting to reconnect...[0m
+[0;32mI (180405) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (181205) idfzk: WiFi disconnected[0m
+[0;32mI (181205) idfzk: Attempting to reconnect...[0m
+[0;32mI (182635) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (183625) idfzk: WiFi disconnected[0m
+[0;32mI (183625) idfzk: Attempting to reconnect...[0m
+[0;32mI (184865) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (186035) idfzk: WiFi disconnected[0m
+[0;32mI (186035) idfzk: Attempting to reconnect...[0m
+[0;32mI (187115) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (188445) idfzk: WiFi disconnected[0m
+[0;32mI (188445) idfzk: Attempting to reconnect...[0m
+[0;32mI (189345) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (190865) idfzk: WiFi disconnected[0m
+[0;32mI (190865) idfzk: Attempting to reconnect...[0m
+[0;32mI (191575) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (193275) idfzk: WiFi disconnected[0m
+[0;32mI (193275) idfzk: Attempting to reconnect...[0m
+[0;32mI (193805) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (195685) idfzk: WiFi disconnected[0m
+[0;32mI (195685) idfzk: Attempting to reconnect...[0m
+[0;32mI (196035) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (198095) idfzk: WiFi disconnected[0m
+[0;32mI (198095) idfzk: Attempting to reconnect...[0m
+[0;32mI (198255) idfzk: Waiting for WiFi connection...[0m
+[0;32mI (200475) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (200515) idfzk: WiFi disconnected[0m
+[0;32mI (200515) idfzk: Attempting to reconnect...[0m
+[0;32mI (202695) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (202925) idfzk: WiFi disconnected[0m
+[0;32mI (202925) idfzk: Attempting to reconnect...[0m
+[0;32mI (204915) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (205335) idfzk: WiFi disconnected[0m
+[0;32mI (205335) idfzk: Attempting to reconnect...[0m
+[0;32mI (207145) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (207745) idfzk: WiFi disconnected[0m
+[0;32mI (207745) idfzk: Attempting to reconnect...[0m
+[0;32mI (209375) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (210165) idfzk: WiFi disconnected[0m
+[0;32mI (210165) idfzk: Attempting to reconnect...[0m
+[0;32mI (211605) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (212575) idfzk: WiFi disconnected[0m
+[0;32mI (212575) idfzk: Attempting to reconnect...[0m
+[0;32mI (213835) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (214985) idfzk: WiFi disconnected[0m
+[0;32mI (214985) idfzk: Attempting to reconnect...[0m
+[0;32mI (216065) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (217405) idfzk: WiFi disconnected[0m
+[0;32mI (217405) idfzk: Attempting to reconnect...[0m
+[0;32mI (218305) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (219815) idfzk: WiFi disconnected[0m
+[0;32mI (219815) idfzk: Attempting to reconnect...[0m
+[0;32mI (220535) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (222225) idfzk: WiFi disconnected[0m
+[0;32mI (222225) idfzk: Attempting to reconnect...[0m
+[0;32mI (222765) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (224635) idfzk: WiFi disconnected[0m
+[0;32mI (224645) idfzk: Attempting to reconnect...[0m
+[0;32mI (224995) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (227055) idfzk: WiFi disconnected[0m
+[0;32mI (227055) idfzk: Attempting to reconnect...[0m
+[0;32mI (227215) idfzk: Waiting for WiFi connection...[0m
+[0;32mI (229435) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (229465) idfzk: WiFi disconnected[0m
+[0;32mI (229465) idfzk: Attempting to reconnect...[0m
+[0;32mI (231655) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (231875) idfzk: WiFi disconnected[0m
+[0;32mI (231875) idfzk: Attempting to reconnect...[0m
+[0;32mI (233885) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (234285) idfzk: WiFi disconnected[0m
+[0;32mI (234285) idfzk: Attempting to reconnect...[0m
+[0;32mI (236115) idfzk: Waiting for WiFi connection...[0m
+[0;33mW (236705) idfzk: WiFi disconnected[0m
+[0;32mI (236705) idfzk: Attempting to reconnect...[0m
+[0;32mI (238345) idfzk: Waiting for WiFi connection...[0m
